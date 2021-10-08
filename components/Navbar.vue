@@ -1,6 +1,8 @@
 <template>
     <div>
-        <h2>Navbar</h2>
+        <div class="admin-nav"></div>
+
+        <div class="admin-header"></div>
     </div>
 </template>
 
