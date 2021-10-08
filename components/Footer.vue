@@ -160,6 +160,9 @@ footer {
                             font-size: 16px;
                             line-height: 24px;
                             color: #fff;
+                            &:hover{
+                                color: #E88243;
+                            }
                         }
                     }
                 }
@@ -169,7 +172,19 @@ footer {
                     display: flex;
                     justify-content: end;
                     a {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
                         margin-left: 8px;
+                        &:hover{
+                            background: #fff;
+                            svg{
+                                path{
+                                    fill: #E88243;
+
+                                }
+                            }
+                        }
                     }
                 }
             }

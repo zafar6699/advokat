@@ -64,12 +64,50 @@
                     </div>
                 </div>
             </div>
+
+            <div class="news">
+                <div class="content-title">
+                    <h3>Янгиликлар</h3>
+                    <nuxt-link to="/">
+                        Barchasini ko‘rish
+                    </nuxt-link>
+                </div>
+
+
+                <div class="card-row">
+                    <div class="card-3" v-for="(item, index) in news" :key="index">
+                        <NewsCard :news="item" />
+                    </div>
+                    
+                </div>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
-export default {};
+export default {
+
+    data(){
+        return {
+            news: [
+                {
+                    title: "AAA",
+                    body: "1111"
+                },
+                {
+                    title: "AAA",
+                    body: "1111"
+                },
+                {
+                    title: "AAA",
+                    body: "1111"
+                }
+            ]
+        }
+    }
+
+};
 </script>
 
 <style lang="scss">
@@ -100,6 +138,9 @@ export default {};
                     line-height: 24px;
                     color: #000000;
                     padding: 24px 0;
+                    &:hover{
+                        color: #E88243;
+                    }
                 }
             }
         }
@@ -143,7 +184,7 @@ export default {};
                         margin-bottom: 8px;
                     }
                     h6:hover {
-                        color: #000;
+                      color: #E88243;
                     }
                 }
             }

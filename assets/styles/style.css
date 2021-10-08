@@ -42,6 +42,14 @@
   width: calc(100% / 6);
 }
 
+.card-2,
+.card-3,
+.card-4,
+.card-5,
+.card-6 {
+  padding: 0px 12px;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -52,5 +60,36 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.content-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 24px;
+}
+
+.content-title h3 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 40px;
+  color: #000000;
+}
+
+.content-title a {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: right;
+  color: #2a2ef4;
 }
 /*# sourceMappingURL=style.css.map */
