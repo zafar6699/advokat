@@ -1,10 +1,11 @@
-@import url("http://fonts.cdnfonts.com/css/pragmatica");
+@import url("http://fonts.cdnfonts.com/css/pragmatica?styles=17026");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Pragmatica", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .umd-container {
@@ -34,6 +35,10 @@
   width: 25%;
 }
 
+.card-8 {
+  width: 50%;
+}
+
 .card-5 {
   width: 20%;
 }
@@ -46,6 +51,7 @@
 .card-3,
 .card-4,
 .card-5,
+.card-8,
 .card-6 {
   padding: 0px 12px;
 }
@@ -91,5 +97,33 @@
   line-height: 24px;
   text-align: right;
   color: #2a2ef4;
+}
+
+.btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btn {
+  margin-right: 16px;
+  padding: 12px 48px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  border: none;
+}
+
+.search {
+  background: #2f80ed;
+  color: #f2f2f2;
+}
+
+.clear {
+  background: #fff;
+  color: #4f4f4f;
 }
 /*# sourceMappingURL=style.css.map */

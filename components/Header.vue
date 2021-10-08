@@ -8,19 +8,19 @@
                     </div>
                     <ul>
                         <li>
-                            <nuxt-link to="/">
+                            <a href="#chart">
                                 Статистика
-                            </nuxt-link>
+                            </a>
                         </li>
                         <li>
-                            <nuxt-link to="/">
+                            <a href="#news">
                                 Янгиликлар
-                            </nuxt-link>
+                            </a>
                         </li>
                         <li>
-                            <nuxt-link to="/">
+                            <a  href="#havola">
                                 Ҳаволалар
-                            </nuxt-link>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -65,22 +65,7 @@
                 </div>
             </div>
 
-            <div class="news">
-                <div class="content-title">
-                    <h3>Янгиликлар</h3>
-                    <nuxt-link to="/">
-                        Barchasini ko‘rish
-                    </nuxt-link>
-                </div>
-
-
-                <div class="card-row">
-                    <div class="card-3" v-for="(item, index) in news" :key="index">
-                        <NewsCard :news="item" />
-                    </div>
-                    
-                </div>
-            </div>
+           
         </div>
     </div>
 </template>
@@ -88,24 +73,6 @@
 <script>
 export default {
 
-    data(){
-        return {
-            news: [
-                {
-                    title: "AAA",
-                    body: "1111"
-                },
-                {
-                    title: "AAA",
-                    body: "1111"
-                },
-                {
-                    title: "AAA",
-                    body: "1111"
-                }
-            ]
-        }
-    }
 
 };
 </script>

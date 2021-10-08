@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div class="news">
+        <nuxt-link to="/" class="news">
             <div class="img-news">
-                <img :src="news.imgSrc" alt="" />
+                <img :src="'_nuxt/' + news.imgSrc" alt="" />
             </div>
             <div class="body-news">
                 <div class="date">
@@ -11,7 +11,7 @@
                 <p class="title">{{ news.title }}</p>
                 <p class="description">{{ news.description }}</p>
             </div>
-        </div>
+        </nuxt-link>
         <div>{{ news.body }}</div>
     </div>
 </template>
@@ -26,4 +26,44 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.news {
+    margin-bottom: 64px;
+    text-decoration: none;
+    .img-news {
+        width: 100%;
+        margin-bottom: 16px;
+        img {
+            width: 100%;
+            border-radius: 8px;
+            height: 240px;
+            object-fit: cover;
+        }
+    }
+    .body-news {
+        .date {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            color: #828282;
+            margin-bottom: 8px;
+        }
+        .title {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            margin-bottom: 8px;
+        }
+        .description {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            color: #828282;
+        }
+    }
+}
+</style>
