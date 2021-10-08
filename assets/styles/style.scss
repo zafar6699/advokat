@@ -31,3 +31,8 @@
 .card-6 {
     width: calc(100% / 6);
 }
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
