@@ -12,7 +12,6 @@
                 <p class="description">{{ news.description }}</p>
             </div>
         </nuxt-link>
-        <div>{{ news.body }}</div>
     </div>
 </template>
 
@@ -49,20 +48,23 @@ export default {
             color: #828282;
             margin-bottom: 8px;
         }
-        .title {
+        .title, .description {
             font-style: normal;
             font-weight: normal;
             font-size: 20px;
             line-height: 24px;
             color: #000000;
             margin-bottom: 8px;
+            height: 48px;
+            line-height: 24px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .description {
-            font-style: normal;
-            font-weight: normal;
             font-size: 16px;
-            line-height: 24px;
-            color: #828282;
         }
     }
 }

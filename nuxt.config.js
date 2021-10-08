@@ -25,6 +25,26 @@ export default {
 
     // Auto import components: https://go.nuxtjs.dev/config-components
     components: true,
+    i18n: {
+        locales: [
+            {
+                code: "uz",
+                file: "uz.js"
+            },
+            {
+                code: "ru",
+                file: "ru.js"
+            },
+            {
+                code: "cr",
+                file: "cr.js"
+            }
+        ],
+        lazy: true,
+        langDir: "lang/",
+        strategy: "prefix_except_default",
+        defaultLocale: "uz"
+    },
 
     // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
     buildModules: [],
@@ -32,7 +52,8 @@ export default {
     // Modules: https://go.nuxtjs.dev/config-modules
     modules: [
         // https://go.nuxtjs.dev/axios
-        "@nuxtjs/axios"
+        "@nuxtjs/axios",
+        "nuxt-i18n"
     ],
 
     // Axios module configuration: https://go.nuxtjs.dev/config-axios

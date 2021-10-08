@@ -1,7 +1,11 @@
 <template>
     <div>
-        <Navbar />
+        <Header />
+        <div style="padding-top:72px">
+
         <Nuxt />
+        </div>
+        <Footer />
     </div>
 </template>
 
