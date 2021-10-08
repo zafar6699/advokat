@@ -1,13 +1,16 @@
 <template>
-    <div>
-        <div class="umd-container">
-            <h2>Client page index</h2>
-        </div>
+  <div>
+    <Banner />
+    <div class="umd-container">
+      <h2>Client page index</h2>
     </div>
+  </div>
 </template>
 
 <script>
+import Banner from "@/components/Banner";
 export default {
-    layout: "client"
+  components: { Banner },
+  layout: "client",
 };
 </script>
