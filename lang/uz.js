@@ -1,3 +1,25 @@
 export default {
-    lan: 'uz'
+    sign: 'Kirish',
+    login: 'Login',
+    password: 'Parol',
+    statistic: 'Statistika',
+    news: 'Yangiliklar',
+    portals: 'Havolalar',
+    kabinet: 'Shaxsiy kabinet',
+    reestr: 'O\'zbekiston advokatlarining yagona reestri',
+    region: 'Viloyatni tanlang',
+    district: 'Tumanni tanlang',
+    tuzilma: 'Advokatlik tuzilmasi',
+    search: 'Izlash',
+    clear: 'Tozalash',
+    certificate: 'Sertifikat raqami',
+    fullname: 'Familya, ism, sharif',
+    allsee: 'Barchasini ko\'rish',
+    regions: 'Viloyatlar',
+    year: 'Yillik',
+    adliya: '© 2021 O\'zbekiston Respublikasi Adliya vazirligi',
+    head: 'Bosh saxifa',
+    more: 'Ko\'proq ko\'rsatish',
+    othernews: 'Boshqa yangiliklar',
+  
 }

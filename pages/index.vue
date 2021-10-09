@@ -5,9 +5,9 @@
         <div class="umd-container">
             <div class="news" id="news">
                 <div class="content-title">
-                    <h3>Янгиликлар</h3>
+                    <h3>{{$t('news')}}</h3>
                     <nuxt-link :to="{ name: `news___${$i18n.locale}` }">
-                        Барчасини кўриш
+                       {{$t('allsee')}}
                     </nuxt-link>
                 </div>
 
@@ -23,12 +23,12 @@
             </div>
             <div class="chart" id="chart">
                 <div class="content-title">
-                    <h3>Статистика</h3>
+                    <h3>{{$t('statistic')}}</h3>
                 </div>
                 <div class="filter-chart">
                     <div class="btn-chart">
-                        <button :class="isBtn1 ? 'activeBtn' : ''" @click="clickChartbutton1">Вилоятлар</button>
-                        <button :class="isBtn ? 'activeBtn' : ''" @click="clickChartbutton2">Йиллик</button>
+                        <button :class="isBtn1 ? 'activeBtn' : ''" @click="clickChartbutton1">{{$t('regions')}}</button>
+                        <button :class="isBtn ? 'activeBtn' : ''" @click="clickChartbutton2">{{$t('year')}}</button>
                     </div>
                     <div class="choose">
                         <div class="select">
@@ -52,7 +52,7 @@
             </div>
             <div class="Havola" id="havola">
                 <div class="content-title">
-                    <h3>Ҳаволалар</h3>
+                    <h3>{{$t('portals')}}</h3>
                 </div>
                 <div class="card-row portals">
                     <div class="card-4">

@@ -4,15 +4,15 @@
             <div class="img">
                 <img src="@/static/img/banner.png" alt="" />
             </div>
-            <div class="umd-container">
+            <div class="umd-container umd">
                 <div class="content-banner">
-                    <h1>Ўзбекистон адвокатларининг ягона реестри</h1>
+                    <h1>{{$t('reestr')}}</h1>
                     <div class="form">
                         <div class="form-row">
                             <div class="fio">
                                 <input
                                     type="text"
-                                    placeholder="Фамиля, исм, шариф"
+                                   :placeholder="$t('fullname')"
                                 />
                             </div>
                             <div class="card">
@@ -21,7 +21,7 @@
                                         class="selectBtn"
                                         data-type="firstOptioana"
                                     >
-                                        Вилоятни танланг
+                                       {{$t('region')}}
                                     </div>
                                     <div class="selectDropdown scroll">
                                         <div
@@ -69,7 +69,7 @@
                                         class="selectBtn"
                                         data-type="firstOptioana"
                                     >
-                                        Туманни танланг
+                                        {{$t('district')}}
                                     </div>
                                     <div class="selectDropdown scroll">
                                         <div
@@ -135,7 +135,7 @@
                                         class="selectBtn"
                                         data-type="firstOptioana"
                                     >
-                                        Адвокатлик тузилмаси
+                                       {{$t('tuzilma')}}
                                     </div>
                                     <div class="selectDropdown scroll">
                                         <div
@@ -181,15 +181,15 @@
                             <div class="card">
                                 <input
                                     type="text"
-                                    placeholder="Сертификат рақами"
+                                    :placeholder="$t('certificate')"
                                 />
                             </div>
                         </div>
                     </div>
 
                     <div class="btns">
-                        <nuxt-link class="btn search" to="/">Излаш</nuxt-link>
-                        <a class="btn clear">Тозалаш</a>
+                        <nuxt-link class="btn search-btn" :to="{name : 'result___' + $i18n.locale}">{{$t('search')}}</nuxt-link>
+                        <a class="btn clear-btn">{{$t('clear')}}</a>
                     </div>
                 </div>
             </div>
@@ -337,6 +337,7 @@ export default {
         transform: scale(1, 1);
     }
 }
+
 .banner {
     width: 100%;
     margin-bottom: 64px;

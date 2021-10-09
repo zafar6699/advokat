@@ -4,9 +4,9 @@
        
             <div class="umd-container">
                 <ul class="road">
-                    <nuxt-link :to="{ name: `index___${$i18n.locale}` }">Бош сахифа</nuxt-link>
+                    <nuxt-link :to="{ name: `index___${$i18n.locale}` }">{{$t('head')}}</nuxt-link>
                     <span class="line"></span>
-                    <li :to="{ name: `news___${$i18n.locale}` }" class="active">Янгиликлар</li>
+                    <li :to="{ name: `news___${$i18n.locale}` }" class="active">{{$t('news')}}</li>
                 </ul>
                 <div class="id-content flex">
                     <div class="left">
@@ -58,9 +58,9 @@
                         </div>
                     </div>
                     <div class="right">
-                        <h2>Бошқа янгиликлар</h2>
+                        <h2>{{$t('othernews')}}</h2>
                         <div class="other-news">
-                            <div
+                            <nuxt-link to="/news/:id"
                                 class="box "
                                 v-for="(item, index) in other"
                                 :key="index"
@@ -71,7 +71,7 @@
                                 <div class="date">
                                     <p>{{ item.date }}</p>
                                 </div>
-                            </div>
+                            </nuxt-link>
                         </div>
                     </div>
                 </div>
@@ -252,9 +252,10 @@ export default {
                 margin-bottom: 16px;
             }
             .box {
-                border-bottom: 1px solid #f2f2f2;
                 padding-bottom: 16px !important;
                 margin-bottom: 8px;
+                text-decoration: none;
+                border-bottom: 1px solid #f2f2f2;
 
                 .other-title {
                     margin-bottom: 8px;

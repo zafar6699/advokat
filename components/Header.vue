@@ -9,17 +9,17 @@
                 :class="isModalSign ? 'my-modalDelete open-modal' : 'my-modal'"
             >
                 <div class="modal">
-                    <h3>Кириш</h3>
+                    <h3>{{$t('sign')}}</h3>
                     <div class="form">
                         <div>
-                            <span>Логин</span>
+                            <span>{{$t('login')}}</span>
                             <input type="text" />
                         </div>
                         <div>
-                            <span>Парол</span>
+                            <span>{{$t('password')}}</span>
                             <input type="password" />
                         </div>
-                        <button>Кириш</button>
+                        <button>{{$t('sign')}}</button>
                     </div>
                     
                 </div>
@@ -36,18 +36,18 @@
                         </div>
                         <ul>
                             <li>
-                                <a href="#chart">
-                                    Статистика
+                                <a href="/#chart">
+                                    {{$t('statistic')}}
                                 </a>
                             </li>
                             <li>
-                                <a href="#news">
-                                    Янгиликлар
+                                <a href="/#news">
+                                    {{$t('news')}}
                                 </a>
                             </li>
                             <li>
-                                <a href="#havola">
-                                    Ҳаволалар
+                                <a href="/#havola">
+                                     {{$t('portals')}}
                                 </a>
                             </li>
                         </ul>
@@ -134,7 +134,7 @@
                         <div :class="isProfil ? ' profil open' : 'profil'">
                             <button v-click-out="hide" @click="clickProfil">
                                 <!-- <img src="@/static/img/avatar.gif" alt="" /> -->
-                                Шахсий кабинет
+                               {{$t('kabinet')}}
                             </button>
                             <div v-if="isProfil" class="setting notauth">
                                 <button class="log-btn" @click="openModalSign">
@@ -160,7 +160,7 @@
                                             />
                                         </svg>
                                     </span>
-                                    Кириш
+                                    {{$t('sign')}}
                                 </button>
                               
                             </div>

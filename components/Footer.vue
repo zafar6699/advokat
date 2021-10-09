@@ -16,17 +16,17 @@
                                 <ul>
                                     <li>
                                         <nuxt-link to="/">
-                                            Статистика
+                                           {{$t('statistic')}}
                                         </nuxt-link>
                                     </li>
                                     <li>
                                         <nuxt-link to="/">
-                                            Янгиликлар
+                                           {{$t('news')}}
                                         </nuxt-link>
                                     </li>
                                     <li>
                                         <nuxt-link to="/">
-                                            Ҳаволалар
+                                          {{$t('portals')}}
                                         </nuxt-link>
                                     </li>
                                 </ul>
@@ -105,7 +105,7 @@
                 <div class="bottom">
                     <div class="umd-container">
                         <p class="end">
-                            © 2021 O'zbekiston Respublikasi Adliya vazirligi
+                            {{$t('adliya')}}
                         </p>
                     </div>
                 </div>

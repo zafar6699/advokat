@@ -3,13 +3,13 @@
         <div class="umd-container">
             <div class="news">
                 <ul class="road">
-                    <nuxt-link :to="{ name: `index___${$i18n.locale}` }">Бош сахифа</nuxt-link>
+                    <nuxt-link :to="{ name: `index___${$i18n.locale}` }">{{$t('head')}}</nuxt-link>
                     <span class="line"></span>
-                    <li :to="{ name: `news___${$i18n.locale}` }" class="active">Янгиликлар</li>
+                    <li :to="{ name: `news___${$i18n.locale}` }" class="active">{{$t('news')}}</li>
                 </ul>
                 <div class="content">
                     <div class="content-title">
-                        <h3>Янгиликлар</h3>
+                        <h3>{{$t('news')}}</h3>
                     </div>
 
                     <div class="card-row">
@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="button more">
-                    <button>Кўпроқ кўрсатиш</button>
+                    <button>{{$t('more')}}</button>
                 </div>
             </div>
         </div>
