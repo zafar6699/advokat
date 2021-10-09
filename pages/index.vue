@@ -6,7 +6,7 @@
             <div class="news" id="news">
                 <div class="content-title">
                     <h3>Янгиликлар</h3>
-                    <nuxt-link to="news">
+                    <nuxt-link :to="{ name: `news___${$i18n.locale}` }">
                         Барчасини кўриш
                     </nuxt-link>
                 </div>

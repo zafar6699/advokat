@@ -3,9 +3,9 @@
         <div class="umd-container">
             <div class="news">
                 <ul class="road">
-                    <nuxt-link to="/">Бош сахифа</nuxt-link>
+                    <nuxt-link :to="{ name: `index___${$i18n.locale}` }">Бош сахифа</nuxt-link>
                     <span class="line"></span>
-                    <li to="/" class="active">Янгиликлар</li>
+                    <li :to="{ name: `news___${$i18n.locale}` }" class="active">Янгиликлар</li>
                 </ul>
                 <div class="content">
                     <div class="content-title">

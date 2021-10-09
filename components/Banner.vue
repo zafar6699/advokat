@@ -250,6 +250,7 @@ export default {
         font-size: 16px;
         line-height: 24px;
         color: #898e9a;
+        border: 1px solid #f2f2f2;
     }
     .select {
         position: relative;
@@ -282,6 +283,15 @@ export default {
         border-right: 2px solid #666;
         border-bottom: 2px solid #666;
         transition: 0.2s ease;
+    }
+    .selectBtn:hover{ 
+      border: 1px solid #E88243;
+       .selectBtn::after{
+      
+         border-right: 2px solid #000 !important;
+        border-bottom: 2px solid #000 !important;
+        
+      }
     }
     .select .selectBtn.toggle {
         border-radius: 3px 3px 0 0;
@@ -391,7 +401,7 @@ export default {
                 display: flex;
                 align-items: center;
                 &:focus {
-                    outline: none;
+                   outline: 1px solid #E88243;
                 }
             }
             input:placeholder {

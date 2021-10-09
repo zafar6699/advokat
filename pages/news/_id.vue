@@ -1,11 +1,12 @@
 <template>
     <div>
         <div class="news-id">
+       
             <div class="umd-container">
                 <ul class="road">
-                    <nuxt-link to="/">Бош сахифа</nuxt-link>
+                    <nuxt-link :to="{ name: `index___${$i18n.locale}` }">Бош сахифа</nuxt-link>
                     <span class="line"></span>
-                    <li to="/" class="active">Янгиликлар</li>
+                    <li :to="{ name: `news___${$i18n.locale}` }" class="active">Янгиликлар</li>
                 </ul>
                 <div class="id-content flex">
                     <div class="left">
