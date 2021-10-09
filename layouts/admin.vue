@@ -1,7 +1,7 @@
 <template>
     <div>
-        <Navbar />
-        <div class="admin-content">
+        <!-- <Navbar /> -->
+        <div class="admin-content" @click="removeClass($event)">
             <Nuxt />
         </div>
     </div>
@@ -13,6 +13,7 @@ export default {
         const select = document.querySelectorAll(".selectBtn");
         const option = document.querySelectorAll(".option");
         const cont = document.querySelectorAll(".selectDropdown");
+        const con = document.querySelector(".content-title");
         let index = 1;
 
         select.forEach(a => {
@@ -25,6 +26,21 @@ export default {
                 b.preventDefault();
             });
         });
+
+        // document.addEventListener("click", e => {
+        //     alert('as')
+        //     if (e.target.id !== "h1")
+        //         for (let i = 0; i < cont.length; i++) {
+        //             cont[i].classList.remove('toggle');
+        //         }
+        //     // else {
+        //     //     for (let i = 0; i < h1.length; i++) {
+        //     //         cont[i].addEventListener("click", () => {
+        //     //             h1[i].className = "blue";
+        //     //         });
+        //     //     }
+        //     // }
+        // });
         option.forEach(a => {
             a.addEventListener("click", b => {
                 b.target.parentElement.classList.remove("toggle");
@@ -39,6 +55,19 @@ export default {
                 b.preventDefault();
             });
         });
+    },
+    methods: {
+      removeClass(e) {
+            const cont = document.querySelector(".selectDropdown");
+
+            document.addEventListener("click", e => {
+                if (e.target.id !== "h1") {
+                    if (cont.classList.contains("toggle")) {
+                        cont.classList.remove("toggle");
+                    }
+                }
+            });
+        }
     }
 };
 </script>

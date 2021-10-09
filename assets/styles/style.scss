@@ -266,9 +266,9 @@ $gc: #e88243;
                     font-size: 12px;
                     line-height: 16px;
                     letter-spacing: 0.04em;
-                    color: #605856;
+                    color: #a09b9a !important;
                     padding: 4px 10px;
-                    opacity: 0.6;
+                    // opacity: 0.6;
                 }
                 th:first-child {
                     padding-left: 0px;
@@ -297,4 +297,15 @@ $gc: #e88243;
             }
         }
     }
+}
+.add {
+    cursor: pointer;
+    padding: 8px 32px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    background: #201918;
+    border: 0;
+    border-radius: 8px;
 }
