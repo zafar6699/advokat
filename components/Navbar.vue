@@ -121,6 +121,7 @@ div.admin-nav {
                     top: 0;
                     height: 100%;
                     width: 4px;
+                    background-color: $gc;
                 }
                 a.nuxt-link-active {
                     background-color: #2e2826;

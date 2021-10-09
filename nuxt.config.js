@@ -18,7 +18,7 @@ export default {
     },
 
     // Global CSS: https://go.nuxtjs.dev/config-css
-    css: ["@/assets/styles/style.css"],
+    css: ["@/assets/styles/style.scss"],
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
     plugins: [],
@@ -53,8 +53,13 @@ export default {
     modules: [
         // https://go.nuxtjs.dev/axios
         "@nuxtjs/axios",
-        "nuxt-i18n"
+        "nuxt-i18n",
+        "@nuxtjs/style-resources"
     ],
+
+    styleResources: {
+        scss: ["@/assets/styles/*.scss"]
+    },
 
     // Axios module configuration: https://go.nuxtjs.dev/config-axios
     axios: {},

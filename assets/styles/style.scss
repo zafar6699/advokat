@@ -1,4 +1,7 @@
-@import url("http://fonts.cdnfonts.com/css/pragmatica?styles=17026");
+// @import url("http://fonts.cdnfonts.com/css/pragmatica?styles=17026");
+
+$gc: #e88243;
+
 * {
     margin: 0;
     padding: 0;
@@ -186,123 +189,121 @@
     }
 }
 .select {
-        position: relative;
-        // margin-bottom: 15px;
-    }
-    .select .selectBtn {
-        background: var(--bg1);
-        box-sizing: border-box;
-        border-radius: 3px;
-        width: 100%;
-        height: 48px;
-        padding: 12px;
-        cursor: pointer;
-        position: relative;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        background: #f2f2f2;
-    }
-    .select .selectBtn:after {
-        content: "";
-        position: absolute;
-        top: 45%;
-        right: 15px;
-        width: 6px;
-        height: 6px;
-        -webkit-transform: translateY(-50%) rotate(45deg);
-        transform: translateY(-50%) rotate(45deg);
-        border-right: 2px solid #666;
-        border-bottom: 2px solid #666;
-        transition: 0.2s ease;
-    }
-    .select .selectBtn.toggle {
-        border-radius: 3px 3px 0 0;
-    }
-    .select .selectBtn.toggle:after {
-        -webkit-transform: translateY(-50%) rotate(-135deg);
-        transform: translateY(-50%) rotate(-135deg);
-    }
-    .select .selectDropdown {
-        position: absolute;
-        top: 100%;
-        width: 100%;
-        overflow-y: scroll !important;
-        max-height: 248px;
+    position: relative;
+    // margin-bottom: 15px;
+}
+.select .selectBtn {
+    background: var(--bg1);
+    box-sizing: border-box;
+    border-radius: 3px;
+    width: 100%;
+    height: 48px;
+    padding: 12px;
+    cursor: pointer;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: #f2f2f2;
+}
+.select .selectBtn:after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    right: 15px;
+    width: 6px;
+    height: 6px;
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
+    border-right: 2px solid #666;
+    border-bottom: 2px solid #666;
+    transition: 0.2s ease;
+}
+.select .selectBtn.toggle {
+    border-radius: 3px 3px 0 0;
+}
+.select .selectBtn.toggle:after {
+    -webkit-transform: translateY(-50%) rotate(-135deg);
+    transform: translateY(-50%) rotate(-135deg);
+}
+.select .selectDropdown {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    overflow-y: scroll !important;
+    max-height: 248px;
 
-        border-radius: 0 0 3px 3px;
-        overflow: hidden;
-        background: var(--bg1);
-        border-top: 1px solid #eee;
-        z-index: 1;
-        background: #fff;
-        -webkit-transform: scale(1, 0);
-        transform: scale(1, 0);
-        -webkit-transform-origin: top center;
-        transform-origin: top center;
-        visibility: hidden;
-        transition: 0.2s ease;
-        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-    }
+    border-radius: 0 0 3px 3px;
+    overflow: hidden;
+    background: var(--bg1);
+    border-top: 1px solid #eee;
+    z-index: 1;
+    background: #fff;
+    -webkit-transform: scale(1, 0);
+    transform: scale(1, 0);
+    -webkit-transform-origin: top center;
+    transform-origin: top center;
+    visibility: hidden;
+    transition: 0.2s ease;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
 
-    .select .selectDropdown .option {
-        padding: 10px;
-        box-sizing: border-box;
-        cursor: pointer;
-    }
-    .select .selectDropdown .option:hover {
-        background: #f3f2f2;
-        // color: #e88243;
-    }
-    .select .selectDropdown.toggle {
-        visibility: visible;
-        -webkit-transform: scale(1, 1);
-        transform: scale(1, 1);
-    }
-    .table-umd {
-        table {
-            width: 100%;
-            thead {
-                
-                padding-bottom: 16px;
-                tr {
-                    th {
-                        text-align: left;
-                        font-weight: 500;
-                        font-size: 12px;
-                        line-height: 16px;
-                        letter-spacing: 0.04em;
-                        color: #605856;
-                        padding: 4px 10px;
-                        opacity: 0.6;
-                    }
-                    th:first-child{
-                        padding-left: 0px;
-                    }
-                    th:first-child{
-                        padding-right: 0px;
-                    }
+.select .selectDropdown .option {
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.select .selectDropdown .option:hover {
+    background: #f3f2f2;
+    // color: #e88243;
+}
+.select .selectDropdown.toggle {
+    visibility: visible;
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+.table-umd {
+    table {
+        width: 100%;
+        thead {
+            padding-bottom: 16px;
+            tr {
+                th {
+                    text-align: left;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 16px;
+                    letter-spacing: 0.04em;
+                    color: #605856;
+                    padding: 4px 10px;
+                    opacity: 0.6;
+                }
+                th:first-child {
+                    padding-left: 0px;
+                }
+                th:first-child {
+                    padding-right: 0px;
                 }
             }
-            tbody {
-                tr {
-                    
-                    td {
-                        padding: 12px 10px;
-                        font-weight: 500;
-                        font-size: 16px;
-                        line-height: 24px;
-                        color: #605856;
-                    }
+        }
+        tbody {
+            tr {
+                td {
+                    padding: 12px 10px;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #605856;
+                }
 
-                    td:first-child{
-                        padding-left: 0px;
-                    }
-                    td:first-child{
-                        padding-right: 0px;
-                    }
+                td:first-child {
+                    padding-left: 0px;
+                }
+                td:first-child {
+                    padding-right: 0px;
                 }
             }
         }
     }
+}
