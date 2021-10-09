@@ -6,13 +6,13 @@
             </div>
             <div class="umd-container umd">
                 <div class="content-banner">
-                    <h1>{{$t('reestr')}}</h1>
+                    <h1>{{ $t("reestr") }}</h1>
                     <div class="form">
                         <div class="form-row">
                             <div class="fio">
                                 <input
                                     type="text"
-                                   :placeholder="$t('fullname')"
+                                    :placeholder="$t('fullname')"
                                 />
                             </div>
                             <div class="card">
@@ -21,7 +21,7 @@
                                         class="selectBtn"
                                         data-type="firstOptioana"
                                     >
-                                       {{$t('region')}}
+                                        {{ $t("region") }}
                                     </div>
                                     <div class="selectDropdown scroll">
                                         <div
@@ -69,7 +69,7 @@
                                         class="selectBtn"
                                         data-type="firstOptioana"
                                     >
-                                        {{$t('district')}}
+                                        {{ $t("district") }}
                                     </div>
                                     <div class="selectDropdown scroll">
                                         <div
@@ -135,7 +135,7 @@
                                         class="selectBtn"
                                         data-type="firstOptioana"
                                     >
-                                       {{$t('tuzilma')}}
+                                        {{ $t("tuzilma") }}
                                     </div>
                                     <div class="selectDropdown scroll">
                                         <div
@@ -188,8 +188,12 @@
                     </div>
 
                     <div class="btns">
-                        <nuxt-link class="btn search-btn" :to="{name : 'result___' + $i18n.locale}">{{$t('search')}}</nuxt-link>
-                        <a class="btn clear-btn">{{$t('clear')}}</a>
+                        <nuxt-link
+                            class="btn search-btn"
+                            :to="{ name: 'result___' + $i18n.locale }"
+                            >{{ $t("search") }}</nuxt-link
+                        >
+                        <a class="btn clear-btn">{{ $t("clear") }}</a>
                     </div>
                 </div>
             </div>
@@ -199,45 +203,7 @@
 
 <script>
 export default {
-    mounted() {
-        const select = document.querySelectorAll(".selectBtn");
-        const option = document.querySelectorAll(".option");
-        const cont = document.querySelectorAll(".selectDropdown");
-        let index = 1;
-        
-
-        select.forEach(a => {
-            a.addEventListener("click", b => {
-                const next = b.target.nextElementSibling;
-                next.classList.toggle("toggle");
-
-                next.style.zIndex = index++;
-
-                b.preventDefault();
-            });
-        });
-        option.forEach(a => {
-            a.addEventListener("click", b => {
-                b.target.parentElement.classList.remove("toggle");
-
-                const parent = b.target.closest(".select").children[0];
-                parent.setAttribute(
-                    "data-type",
-                    b.target.getAttribute("data-type")
-                );
-                parent.innerText = b.target.innerText;
-
-                b.preventDefault();
-            });
-        });
-
-//         window.addEventListener("click", e => {
-//             cont.forEach(item => {
-//  item.classList.remove("toggle");
-//             });
-
-//         });
-    }
+    mounted() {}
 };
 </script>
 
@@ -284,14 +250,12 @@ export default {
         border-bottom: 2px solid #666;
         transition: 0.2s ease;
     }
-    .selectBtn:hover{ 
-      border: 1px solid #E88243;
-       .selectBtn::after{
-      
-         border-right: 2px solid #000 !important;
-        border-bottom: 2px solid #000 !important;
-        
-      }
+    .selectBtn:hover {
+        border: 1px solid #e88243;
+        .selectBtn::after {
+            border-right: 2px solid #000 !important;
+            border-bottom: 2px solid #000 !important;
+        }
     }
     .select .selectBtn.toggle {
         border-radius: 3px 3px 0 0;
@@ -402,7 +366,7 @@ export default {
                 display: flex;
                 align-items: center;
                 &:focus {
-                   outline: 1px solid #E88243;
+                    outline: 1px solid #e88243;
                 }
             }
             input:placeholder {
