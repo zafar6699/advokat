@@ -1,6 +1,28 @@
 // @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 $gc: #e88243;
 
+button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+button.primary {
+    background-color: $gc;
+    color: #fff;
+
+    &:active {
+        background: linear-gradient(
+                0deg,
+                rgba(28, 27, 27, 0.15),
+                rgba(28, 27, 27, 0.15)
+            ),
+            #e88243 !important;
+    }
+    &:hover {
+        background-color: #f09047;
+    }
+}
+
 .umd-container {
     max-width: 1254px;
     margin: 0 auto;
