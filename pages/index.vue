@@ -5,9 +5,9 @@
         <div class="umd-container">
             <div class="news" id="news">
                 <div class="content-title">
-                    <h3>{{$t('news')}}</h3>
+                    <h3>{{ $t("news") }}</h3>
                     <nuxt-link :to="{ name: `news___${$i18n.locale}` }">
-                       {{$t('allsee')}}
+                        {{ $t("allsee") }}
                     </nuxt-link>
                 </div>
 
@@ -23,17 +23,27 @@
             </div>
             <div class="chart" id="chart">
                 <div class="content-title">
-                    <h3>{{$t('statistic')}}</h3>
+                    <h3>{{ $t("statistic") }}</h3>
                 </div>
                 <div class="filter-chart">
                     <div class="btn-chart">
-                        <button :class="isBtn1 ? 'activeBtn' : ''" @click="clickChartbutton1">{{$t('regions')}}</button>
-                        <button :class="isBtn ? 'activeBtn' : ''" @click="clickChartbutton2">{{$t('year')}}</button>
+                        <button
+                            :class="isBtn1 ? 'activeBtn' : ''"
+                            @click="clickChartbutton1"
+                        >
+                            {{ $t("regions") }}
+                        </button>
+                        <button
+                            :class="isBtn ? 'activeBtn' : ''"
+                            @click="clickChartbutton2"
+                        >
+                            {{ $t("year") }}
+                        </button>
                     </div>
                     <div class="choose">
                         <div class="select">
                             <div class="selectBtn" data-type="firstOptioana">
-                               2021
+                                2021
                             </div>
                             <div class="selectDropdown scroll">
                                 <div class="option" data-type="forthOption">
@@ -52,7 +62,7 @@
             </div>
             <div class="Havola" id="havola">
                 <div class="content-title">
-                    <h3>{{$t('portals')}}</h3>
+                    <h3>{{ $t("portals") }}</h3>
                 </div>
                 <div class="card-row portals">
                     <div class="card-4">
@@ -287,8 +297,8 @@ export default {
 
     data() {
         return {
-          isBtn1 : false,
-          isBtn : false,
+            isBtn1: false,
+            isBtn: false,
             news: [
                 {
                     imgSrc: "/static/img/banner.png",
@@ -316,20 +326,20 @@ export default {
         };
     },
     methods: {
-      clickChartbutton1(){
-        this.isBtn1 = !this.isBtn1 
-        this.isBtn = false
-      },
-      clickChartbutton2(){
-        this.isBtn = !this.isBtn 
-        this.isBtn1 = false
-      }
+        clickChartbutton1() {
+            this.isBtn1 = !this.isBtn1;
+            this.isBtn = false;
+        },
+        clickChartbutton2() {
+            this.isBtn = !this.isBtn;
+            this.isBtn1 = false;
+        }
     }
 };
 </script>
 <style lang="scss" scoped>
-.activeBtn{
-  background: #E1E5EA !important;
+.activeBtn {
+    background: #e1e5ea !important;
 }
 .news {
     margin-bottom: 64px;
@@ -343,7 +353,7 @@ export default {
             display: flex;
             align-items: center;
             button {
-              cursor: pointer;
+                cursor: pointer;
                 padding: 12px 24px;
                 background: #f1f2f5;
                 border: 0;
