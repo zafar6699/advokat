@@ -1,120 +1,110 @@
 <template>
     <div>
-        <div class="history">
-            <div class="umd-container">
-                <div class="content-title">
-                    <h3>
-                        Тарих
-                    </h3>
-                </div>
-                <div class="form">
-                    <div class="card-row">
-                        <div class="card-4">
-                            <span>Логин</span>
-                            <div class="select">
-                                <div
-                                    class="selectBtn"
-                                    data-type="firstOptioana"
-                                >
-                                    {{ $t("tuzilma") }}
-                                </div>
-                                <div class="selectDropdown scroll">
-                                    <div class="option" data-type="firstOption">
-                                        First option
-                                    </div>
-                                    <div
-                                        class="option"
-                                        data-type="secondOption"
-                                    >
-                                        Second option
-                                    </div>
-                                    <div class="option" data-type="thirdOption">
-                                        Third option
-                                    </div>
-                                    <div class="option" data-type="forthOption">
-                                        Forth option
-                                    </div>
-                                    <div class="option" data-type="fifthOption">
-                                        Fifth option
-                                    </div>
-                                    <div
-                                        class="option"
-                                        data-type="sixthOptionzzz"
-                                    >
-                                        12
-                                    </div>
-                                </div>
+        <div class="history" @click="removeClass($event)">
+            <div class="content-title">
+                <h3>
+                    Тарих
+                </h3>
+            </div>
+            <div class="form">
+                <div class="card-row">
+                    <div class="card-4">
+                        <span>Логин</span>
+                        <div class="select">
+                            <div
+                                class="selectBtn"
+                                id="h1"
+                                data-type="firstOptioana"
+                            >
+                                {{ $t("tuzilma") }}
                             </div>
-                        </div>
-                        <div class="card-4">
-                            <span>Логин</span>
-                            <input value="" type="date" />
-                        </div>
-                        <div class="card-4">
-                            <span>Логин</span>
-                            <input value="" type="date" />
-                        </div>
-
-                        <div class="card-4">
-                            <div class="search">
-                                <button class="search-bt">
-                                    {{ $t("search") }}
-                                </button>
-                                <button class="clear-bt flex">
-                                    <svg
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M18 6L6 18"
-                                            stroke="black"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                        <path
-                                            d="M6 6L18 18"
-                                            stroke="black"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                    </svg>
-                                </button>
+                            <div class="selectDropdown scroll">
+                                <div class="option" data-type="firstOption">
+                                    First option
+                                </div>
+                                <div class="option" data-type="secondOption">
+                                    Second option
+                                </div>
+                                <div class="option" data-type="thirdOption">
+                                    Third option
+                                </div>
+                                <div class="option" data-type="forthOption">
+                                    Forth option
+                                </div>
+                                <div class="option" data-type="fifthOption">
+                                    Fifth option
+                                </div>
+                                <div class="option" data-type="sixthOptionzzz">
+                                    12
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div class="card-4">
+                        <span>Логин</span>
+                        <input value="" type="date" />
+                    </div>
+                    <div class="card-4">
+                        <span>Логин</span>
+                        <input value="" type="date" />
+                    </div>
 
-                <div class="table-umd">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th
-                                    v-for="(item, index) in header"
-                                    :key="index"
+                    <div class="card-4">
+                        <div class="search">
+                            <button class="search-bt">
+                                {{ $t("search") }}
+                            </button>
+                            <button class="clear-bt flex">
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
                                 >
-                                    {{ item[$i18n.locale] }}
-                                </th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr v-for="(item, index) in data" :key="index">
-                                <td>{{ item.fam }}</td>
-                                <td>{{ item.name }}</td>
-                                <td>{{ item.address }}</td>
-                                <td>{{ item.phone }}</td>
-                                <td>{{ item.phone }}</td>
-                                <td>{{ item.phone }}</td>
-                                <td>{{ item.phone }}</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                                    <path
+                                        d="M18 6L6 18"
+                                        stroke="black"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                    <path
+                                        d="M6 6L18 18"
+                                        stroke="black"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
                 </div>
+            </div>
+
+            <div class="table-umd">
+                <table>
+                    <thead>
+                        <tr>
+                            <th v-for="(item, index) in header" :key="index">
+                                {{ item[$i18n.locale] }}
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr v-for="(item, index) in data" :key="index">
+                            <td>{{ item.fam }}</td>
+                            <td>{{ item.name }}</td>
+                            <td>{{ item.address }}</td>
+                            <td>{{ item.phone }}</td>
+                            <td>{{ item.phone }}</td>
+                            <td>{{ item.phone }}</td>
+                            <td>{{ item.phone }}</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -185,17 +175,29 @@ export default {
                     fam: "Qalandarov",
                     address: "Kalelin",
                     phone: "+009901166699"
-                },
+                }
             ]
         };
     },
-    mounted() {}
+    mounted() {},
+    methods: {
+        removeClass(e) {
+            const cont = document.querySelector(".selectDropdown");
+
+            document.addEventListener("click", e => {
+                if (e.target.id !== "h1") {
+                    if (cont.classList.contains("toggle")) {
+                        cont.classList.remove("toggle");
+                    }
+                }
+            });
+        }
+    }
 };
 </script>
 
 <style lang="scss" scoped>
 .history {
-    
     .form {
         margin-bottom: 44px;
         .card-row {
