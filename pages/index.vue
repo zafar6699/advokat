@@ -352,6 +352,7 @@ export default {
         .btn-chart {
             display: flex;
             align-items: center;
+            background: #f1f2f5;
             button {
                 cursor: pointer;
                 padding: 12px 24px;

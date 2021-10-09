@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="history" @click="removeClass($event)">
+        <div class="history">
             <div class="content-title">
                 <h3>
                     Тарих
@@ -180,19 +180,7 @@ export default {
         };
     },
     mounted() {},
-    methods: {
-        removeClass(e) {
-            const cont = document.querySelector(".selectDropdown");
-
-            document.addEventListener("click", e => {
-                if (e.target.id !== "h1") {
-                    if (cont.classList.contains("toggle")) {
-                        cont.classList.remove("toggle");
-                    }
-                }
-            });
-        }
-    }
+    methods: {}
 };
 </script>
 
