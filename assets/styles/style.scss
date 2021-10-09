@@ -260,3 +260,49 @@
         -webkit-transform: scale(1, 1);
         transform: scale(1, 1);
     }
+    .table-umd {
+        table {
+            width: 100%;
+            thead {
+                
+                padding-bottom: 16px;
+                tr {
+                    th {
+                        text-align: left;
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 16px;
+                        letter-spacing: 0.04em;
+                        color: #605856;
+                        padding: 4px 10px;
+                        opacity: 0.6;
+                    }
+                    th:first-child{
+                        padding-left: 0px;
+                    }
+                    th:first-child{
+                        padding-right: 0px;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    
+                    td {
+                        padding: 12px 10px;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: #605856;
+                    }
+
+                    td:first-child{
+                        padding-left: 0px;
+                    }
+                    td:first-child{
+                        padding-right: 0px;
+                    }
+                }
+            }
+        }
+    }
