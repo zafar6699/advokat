@@ -121,10 +121,14 @@ div.admin-nav {
                     top: 0;
                     height: 100%;
                     width: 4px;
-                    background-color: $gc;
+                    background-color: transparent;
                 }
                 a.nuxt-link-active {
                     background-color: #2e2826;
+
+                    &::before {
+                        background-color: $gc;
+                    }
                 }
             }
         }

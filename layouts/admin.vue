@@ -1,7 +1,9 @@
 <template>
     <div>
         <Navbar />
-        <Nuxt />
+        <div class="admin-content">
+            <Nuxt />
+        </div>
     </div>
 </template>
 
@@ -41,4 +43,10 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+div.admin-content {
+    margin-left: 310px;
+    margin-top: 72px;
+    padding: 20px 40px;
+}
+</style>
