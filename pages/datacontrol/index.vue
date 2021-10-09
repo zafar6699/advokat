@@ -1,27 +1,28 @@
 <template>
     <div>
         <div class="control">
-              <div
-                @click="isModalSign = false"
-                :class="isModalSign ? 'fixvh block-fh' : 'fixvh'"
-            ></div>
             <div
-                :class="isModalSign ? 'my-modalDelete open-modal' : 'my-modal'"
-            >
+                @click="isRegion = false"
+                :class="isRegion ? 'fixvh block-fh' : 'fixvh'"
+            ></div>
+            <div :class="isRegion ? 'my-modalDelete open-modal' : 'my-modal'">
                 <div class="modal">
-                    <h3>{{$t('sign')}}</h3>
+                    <h3>Viloyat qo'shish</h3>
                     <div class="form">
                         <div>
-                            <span>{{$t('login')}}</span>
-                            <input type="text" />
+                            <span>O'zbekcha</span>
+                            <input v-model="name.uz" type="text" />
                         </div>
                         <div>
-                            <span>{{$t('password')}}</span>
-                            <input type="password" />
+                            <span>Ўзбекча</span>
+                            <input v-model="name.kr" type="text" />
                         </div>
-                        <button>{{$t('sign')}}</button>
+                        <div>
+                            <span>Рус тилида</span>
+                            <input v-model="name.ru" type="text" />
+                        </div>
+                        <button @click="addregion" class="add">Qo'shish</button>
                     </div>
-                    
                 </div>
             </div>
             <div class="content-title">
@@ -41,7 +42,9 @@
                 <div v-if="step == 1" class="region">
                     <div class="mid-content-title flex">
                         <h3>Вилоятлар</h3>
-                        <button class="add">Қўшиш</button>
+                        <button @click="openModalRegion" class="add">
+                            Қўшиш
+                        </button>
                     </div>
                     <div class="table-content">
                         <div class="table-umd ">
@@ -136,33 +139,37 @@
                         </div>
                     </div>
                     <div class="table-content">
-
-                    <div class="table-umd">
-                        <table>
-                            <thead>
-                                <tr v-for="(item, index) in tuman" :key="index">
-                                    <th>
-                                        {{ item.uz }}
-                                    </th>
-                                    <th>
-                                        {{ item.cr }}
-                                    </th>
-                                    <th>
-                                        {{ item.ru }}
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr v-for="(item, index) in data" :key="index">
-                                    <td>{{ item.uz }}</td>
-                                    <td>{{ item.cr }}</td>
-                                    <td>{{ item.ru }}</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="table-umd">
+                            <table>
+                                <thead>
+                                    <tr
+                                        v-for="(item, index) in tuman"
+                                        :key="index"
+                                    >
+                                        <th>
+                                            {{ item.uz }}
+                                        </th>
+                                        <th>
+                                            {{ item.cr }}
+                                        </th>
+                                        <th>
+                                            {{ item.ru }}
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr
+                                        v-for="(item, index) in data"
+                                        :key="index"
+                                    >
+                                        <td>{{ item.uz }}</td>
+                                        <td>{{ item.cr }}</td>
+                                        <td>{{ item.ru }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -174,7 +181,13 @@ export default {
     layout: "admin",
     data() {
         return {
-            step: 2,
+            step: 1,
+            isRegion: false,
+            name: {
+                uz: "",
+                kr: "",
+                ru: ""
+            },
             header: [
                 {
                     uz: "Viloyatlar ro‘yxati",
@@ -226,7 +239,23 @@ export default {
             ]
         };
     },
+    async mounted() {
+        let name = await this.$axios.$get("region/get");
+        this.name = name.data;
+        console.log("assa", this.name);
+    },
     methods: {
+        async addregion() {
+            await this.$axios.$post("region/add", this.region).then(res => {
+                console.log("success");
+            });
+        },
+        openModalRegion() {
+            this.isRegion = true;
+        },
+        closeModalRegion() {
+            this.isRegion = false;
+        },
         clickTab(index) {
             this.step = index + 1;
         }
@@ -235,11 +264,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-        .table-content {
-            padding: 16px 40px ;
-            background: #f1f2f5;
-            border-radius: 8px;
-        }
+.table-content {
+    padding: 16px 40px;
+    background: #f1f2f5;
+    border-radius: 8px;
+}
 .control {
     .add {
         cursor: pointer;

@@ -1,7 +1,7 @@
 <template>
     <div>
         <Header />
-        <div style="padding-top:72px">
+        <div style="padding-top:72px" >
             <Nuxt />
         </div>
         <Footer />
@@ -9,6 +9,22 @@
 </template>
 
 <script>
+import Vue from "vue";
+Vue.directive("click-out", {
+    bind: function(el, binding, vnode) {
+        el.clickOutsideEvent = function(event) {
+            // here I check that click was outside the el and his childrens
+            if (!(el === event.target || el.contains(event.target))) {
+                // and if it did, call method provided in attribute value
+                vnode.context[binding.expression](event);
+            }
+        };
+        document.body.addEventListener("click", el.clickOutsideEvent);
+    },
+    unbind: function(el) {
+        document.body.removeEventListener("click", el.clickOutsideEvent);
+    }
+});
 export default {
     data() {},
     mounted() {
@@ -43,6 +59,9 @@ export default {
         });
     },
     methods: {
+        // hide() {
+        //     this.isProfil = false;
+        // },
          removeClass(e) {
             const cont = document.querySelector(".selectDropdown");
 
