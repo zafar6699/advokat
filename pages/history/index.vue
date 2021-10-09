@@ -94,10 +94,9 @@
                 <table>
                     <thead>
                         <tr>
-                            <th
-                                v-for="(item, index) in header"
-                                :key="index"
-                            ></th>
+                            <th v-for="(item, index) in header" :key="index">
+                                {{ item[$i18n.locale] }}
+                            </th>
                         </tr>
                     </thead>
 
