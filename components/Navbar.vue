@@ -78,16 +78,22 @@
                 </div>
 
                 <div class="header-right">
-                    <div class="notification">
-                        <button>
+                    <div class="notification" v-click-out="closeNot">
+                        <button @click="openNot = true">
                             <img src="@/static/img/bell.png" alt="" />
                         </button>
 
-                        <div class="not-modal not-modal-open">
+                        <div
+                            :class="
+                                openNot
+                                    ? 'not-modal not-modal-open'
+                                    : 'not-modal'
+                            "
+                        >
                             <div class="m-title">
                                 <h5>Хабарномалар</h5>
 
-                                <button>
+                                <button class="not" @click="openNot = false">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="14"
@@ -110,7 +116,7 @@
                                 </button>
                             </div>
 
-                            <div class="not-body">
+                            <div class="not-body scroll">
                                 <h4 class="date-title">5 май, 2021</h4>
 
                                 <div class="not-item">
@@ -207,11 +213,43 @@
                                             </button>
 
                                             <div class="right-actions">
-                                                <button>Қабул қилиш</button>
-                                                <button>Бекор қилиш</button>
+                                                <button class="accept primary">
+                                                    Қабул қилиш
+                                                </button>
+                                                <button class="cancel">
+                                                    Бекор қилиш
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+
+                                <div class="not-item">
+                                    <div class="name-time">
+                                        <h3>
+                                            <span class="circle">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="8"
+                                                    height="8"
+                                                    viewBox="0 0 8 8"
+                                                    fill="none"
+                                                >
+                                                    <circle
+                                                        cx="4"
+                                                        cy="4"
+                                                        r="4"
+                                                        fill="#E84343"
+                                                    /></svg
+                                            ></span>
+                                            Муқимов Отабек
+                                        </h3>
+                                        <h6>16:00</h6>
+                                    </div>
+                                    <p>
+                                        Муқимов Отабек сизга судялар томонидан
+                                        жиноят иш берилди ишни
+                                    </p>
 
                                     <div class="item-advance">
                                         <div class="acc-body">
@@ -274,6 +312,94 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="not-item">
+                                    <div class="name-time">
+                                        <h3>
+                                            <span class="circle">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="8"
+                                                    height="8"
+                                                    viewBox="0 0 8 8"
+                                                    fill="none"
+                                                >
+                                                    <circle
+                                                        cx="4"
+                                                        cy="4"
+                                                        r="4"
+                                                        fill="#E84343"
+                                                    /></svg
+                                            ></span>
+                                            Муқимов Отабек
+                                        </h3>
+                                        <h6>16:00</h6>
+                                    </div>
+                                    <p>
+                                        Муқимов Отабек сизга судялар томонидан
+                                        жиноят иш берилди ишни
+                                    </p>
+
+                                    <div class="item-advance">
+                                        <div class="acc-body">
+                                            <div class="acc-item">
+                                                <h2>Манзил</h2>
+                                                <h3>
+                                                    Тошкент вилояти, Келес Йўли
+                                                    кўчаси, 59-уй
+                                                </h3>
+                                            </div>
+                                            <div class="acc-item">
+                                                <h2>Йўналиши</h2>
+                                                <h3>
+                                                    Фуқаролик ва иқтисодий
+                                                </h3>
+                                            </div>
+                                            <div class="acc-item">
+                                                <h2>Жараён босқичи</h2>
+                                                <h3>
+                                                    1
+                                                </h3>
+                                            </div>
+
+                                            <div class="acc-item">
+                                                <h2>Иш жараёни тили:</h2>
+                                                <h3>
+                                                    Ўзбек тили
+                                                </h3>
+                                            </div>
+                                            <div class="acc-item">
+                                                <h2>Ижро этиш санаси:</h2>
+                                                <h3>
+                                                    22.07.2021 17:30
+                                                </h3>
+                                            </div>
+                                        </div>
+
+                                        <div class="item-actions">
+                                            <button class="collapse">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="14"
+                                                    height="8"
+                                                    viewBox="0 0 14 8"
+                                                    fill="none"
+                                                >
+                                                    <path
+                                                        d="M1 1L7 7L13 1"
+                                                        stroke="black"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    />
+                                                </svg>
+                                            </button>
+
+                                            <span class="status cancel">
+                                                Рад этилган
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -284,7 +410,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+    data() {
+        return {
+            openNot: false
+        };
+    },
+    methods: {
+        closeNot() {
+            this.openNot = false;
+        }
+    }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -362,7 +499,7 @@ div.admin-header {
         align-items: center;
 
         div.notification {
-            button {
+            button.not {
                 background: transparent;
                 border: none;
                 cursor: pointer;
@@ -383,6 +520,7 @@ div.not-modal {
     background-color: #fff;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    height: 100vh;
     div.m-title {
         display: flex;
         align-items: center;
@@ -408,6 +546,8 @@ div.not-modal {
     div.note-select {
         display: flex;
         background: #f3f2f2 !important;
+        margin-bottom: 25px;
+        border-radius: 4px;
         button {
             width: 50%;
             border-radius: 4px;
@@ -416,6 +556,10 @@ div.not-modal {
             line-height: 24px;
             background: #f3f2f2 !important;
             padding: 12px;
+
+            &:hover {
+                color: $gc;
+            }
         }
 
         button.selected {
@@ -427,5 +571,116 @@ div.not-modal {
 
 div.not-modal-open {
     transform: translateX(0) !important;
+}
+
+div.not-body {
+    max-height: calc(100vh - 200px);
+    overflow-y: scroll;
+    padding-right: 10px;
+    span.status {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    span.past {
+        color: #f2c94c;
+    }
+    span.cancel {
+        color: #eb5757;
+    }
+    div.acc-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0px;
+        border-top: 1px solid #f3f2f2;
+        h2 {
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 16px;
+            color: #9d9392;
+            width: 50%;
+        }
+        h3 {
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            width: 50%;
+            text-align: right;
+            color: #000000;
+            text-align: right;
+        }
+    }
+
+    div.acc-body {
+        margin-bottom: 16px;
+    }
+
+    div.item-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+
+        div.right-actions {
+            button {
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 16px;
+                padding: 8px 16px;
+                border-radius: 4px;
+            }
+
+            button.cancel {
+                border: 1px solid #000;
+            }
+        }
+    }
+    h4.date-title {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #9d9392;
+        margin-bottom: 15px;
+    }
+    div.not-item {
+        border-bottom: 1px solid #f3f2f2;
+        margin-bottom: 15px;
+    }
+    p {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 15px;
+        color: #201918;
+    }
+
+    div.name-time {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        span.circle {
+            margin-right: 5px;
+        }
+        h3 {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+
+            display: flex;
+            align-items: center;
+
+            color: #201918;
+        }
+        h6 {
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+
+            text-align: right;
+
+            color: #9d9392;
+        }
+    }
 }
 </style>

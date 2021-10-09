@@ -1,6 +1,6 @@
 <template>
     <div>
-        <!-- <Navbar /> -->
+        <Navbar />
         <div class="admin-content" @click="removeClass($event)">
             <Nuxt />
         </div>
@@ -56,19 +56,7 @@ export default {
             });
         });
     },
-    methods: {
-      removeClass(e) {
-            const cont = document.querySelector(".selectDropdown");
-
-            document.addEventListener("click", e => {
-                if (e.target.id !== "h1") {
-                    if (cont.classList.contains("toggle")) {
-                        cont.classList.remove("toggle");
-                    }
-                }
-            });
-        }
-    }
+    methods: {}
 };
 </script>
 
