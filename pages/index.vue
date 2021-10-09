@@ -41,21 +41,22 @@
                         </button>
                     </div>
                     <div class="choose">
-                        <div class="select">
-                            <div class="selectBtn" data-type="firstOptioana">
-                                2021
-                            </div>
-                            <div  class="selectDropdown scroll">
-                                <div class="option" data-type="1">
-                                    2020
-                                </div>
-                                <div class="option" data-type="1">
-                                    2019
-                                </div>
-                                <div class="option" data-type="1">
-                                    2021
-                                </div>
-                            </div>
+                        <div class="custom-select">
+                            <select>
+                                <option value="0">Select car:</option>
+                                <option value="1">Audi</option>
+                                <option value="2">BMW</option>
+                                <option value="3">Citroen</option>
+                                <option value="4">Ford</option>
+                                <option value="5">Honda</option>
+                                <option value="6">Jaguar</option>
+                                <option value="7">Land Rover</option>
+                                <option value="8">Mercedes</option>
+                                <option value="9">Mini</option>
+                                <option value="10">Nissan</option>
+                                <option value="11">Toyota</option>
+                                <option value="12">Volvo</option>
+                            </select>
                         </div>
                     </div>
                 </div>
