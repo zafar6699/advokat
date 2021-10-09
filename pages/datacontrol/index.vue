@@ -1,6 +1,29 @@
 <template>
     <div>
         <div class="control">
+              <div
+                @click="isModalSign = false"
+                :class="isModalSign ? 'fixvh block-fh' : 'fixvh'"
+            ></div>
+            <div
+                :class="isModalSign ? 'my-modalDelete open-modal' : 'my-modal'"
+            >
+                <div class="modal">
+                    <h3>{{$t('sign')}}</h3>
+                    <div class="form">
+                        <div>
+                            <span>{{$t('login')}}</span>
+                            <input type="text" />
+                        </div>
+                        <div>
+                            <span>{{$t('password')}}</span>
+                            <input type="password" />
+                        </div>
+                        <button>{{$t('sign')}}</button>
+                    </div>
+                    
+                </div>
+            </div>
             <div class="content-title">
                 <h3>Маълумотларни бошқариш</h3>
             </div>
