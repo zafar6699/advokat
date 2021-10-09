@@ -88,27 +88,33 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="table-umd">
-                <table>
-                    <thead>
-                        <tr>
-                            <th v-for="(item, index) in header" :key="index">
-                                {{ item[$i18n.locale] }}
-                            </th>
-                        </tr>
-                    </thead>
+                <div class="table-umd">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th
+                                    v-for="(item, index) in header"
+                                    :key="index"
+                                >
+                                    {{ item[$i18n.locale] }}
+                                </th>
+                            </tr>
+                        </thead>
 
-                    <tbody>
-                        <tr v-for="(item, index) in data" :key="index">
-                            <td>{{ item.name }}</td>
-                            <td>{{ item.fam }}</td>
-                            <td>{{ item.address }}</td>
-                            <td>{{ item.phone }}</td>
-                        </tr>
-                    </tbody>
-                </table>
+                        <tbody>
+                            <tr v-for="(item, index) in data" :key="index">
+                                <td>{{ item.fam }}</td>
+                                <td>{{ item.name }}</td>
+                                <td>{{ item.address }}</td>
+                                <td>{{ item.phone }}</td>
+                                <td>{{ item.phone }}</td>
+                                <td>{{ item.phone }}</td>
+                                <td>{{ item.phone }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
@@ -121,29 +127,53 @@ export default {
         return {
             header: [
                 {
-                    uz: "Nomi",
-                    ru: "Имя",
-                    cr: "Номи"
+                    uz: "Login ",
+                    ru: "Логин",
+                    cr: "Логин"
                 },
                 {
-                    uz: "Nomi",
-                    ru: "Имя",
-                    cr: "Номи"
+                    uz: "F.I.O ",
+                    ru: "Ф.И.О ",
+                    cr: "Ф.И.О "
                 },
                 {
-                    uz: "Nomi",
-                    ru: "Имя",
-                    cr: "Номи"
+                    uz: "Rol",
+                    ru: "Рол",
+                    cr: "Рол"
                 },
                 {
-                    uz: "Nomi",
-                    ru: "Имя",
-                    cr: "Номи"
+                    uz: "IP",
+                    ru: "IP",
+                    cr: "IP"
+                },
+                {
+                    uz: "Action",
+                    ru: "Action",
+                    cr: "Action"
+                },
+                {
+                    uz: "Sabab",
+                    ru: "Причина",
+                    cr: "Сабаб"
+                },
+                {
+                    uz: "Vaqt",
+                    ru: "Время",
+                    cr: "Вақт"
                 }
             ],
             data: [
                 {
+                    name: "00123 (Муҳаммадқодиров Муҳамммад  Муҳаммадалиевич)r",
+                    fam: "15.09.2021:15:15:45",
+                    address: "Kalelin",
+                    address: "Паролни алмаштирди",
+                    phone: "+009901166699"
+                },
+                {
                     name: "Zafar",
+                    fam: "Qalandarov",
+                    address: "Kalelin",
                     fam: "Qalandarov",
                     address: "Kalelin",
                     phone: "+009901166699"
@@ -152,20 +182,10 @@ export default {
                     name: "Zafar",
                     fam: "Qalandarov",
                     address: "Kalelin",
-                    phone: "+9901166699"
-                },
-                {
-                    name: "Zafar",
                     fam: "Qalandarov",
                     address: "Kalelin",
-                    phone: "+9901166699"
+                    phone: "+009901166699"
                 },
-                {
-                    name: "Zafar",
-                    fam: "Qalandarov",
-                    address: "Kalelin",
-                    phone: "+9901166699"
-                }
             ]
         };
     },
@@ -175,6 +195,7 @@ export default {
 
 <style lang="scss" scoped>
 .history {
+    
     .form {
         margin-bottom: 44px;
         .card-row {
