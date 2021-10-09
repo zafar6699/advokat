@@ -45,15 +45,14 @@
                             <div class="selectBtn" data-type="firstOptioana">
                                 2021
                             </div>
-                            <!-- v-click-out="removeClass($event)" -->
                             <div  class="selectDropdown scroll">
-                                <div class="option" data-type="forthOption">
+                                <div class="option" data-type="1">
                                     2020
                                 </div>
-                                <div class="option" data-type="fifthOption">
+                                <div class="option" data-type="1">
                                     2019
                                 </div>
-                                <div class="option" data-type="sixthOptionzzz">
+                                <div class="option" data-type="1">
                                     2021
                                 </div>
                             </div>
