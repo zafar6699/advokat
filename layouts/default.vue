@@ -1,7 +1,7 @@
 <template>
     <div>
         <Header />
-        <div style="padding-top:72px" >
+        <div style="padding-top:72px">
             <Nuxt />
         </div>
         <Footer />
@@ -9,7 +9,6 @@
 </template>
 
 <script>
-
 export default {
     data() {},
     mounted() {
@@ -43,22 +42,7 @@ export default {
             });
         });
     },
-    methods: {
-        // hide() {
-        //     this.isProfil = false;
-        // },
-         removeClass(e) {
-            const cont = document.querySelector(".selectDropdown");
-
-            document.addEventListener("click", e => {
-                if (e.target.id !== "h1") {
-                    if (cont.classList.contains("toggle")) {
-                        cont.classList.remove("toggle");
-                    }
-                }
-            });
-        }
-    }
+    methods: {}
 };
 </script>
 

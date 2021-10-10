@@ -38,7 +38,7 @@
                     <li>
                         <nuxt-link
                             nuxt-link-exact-link
-                            :to="{ name: `monitoring___${$i18n.locale}` }"
+                            :to="{ name: `modul___${$i18n.locale}` }"
                         >
                             Ҳисоботлар модули
                         </nuxt-link>
@@ -46,7 +46,7 @@
                     <li>
                         <nuxt-link
                             nuxt-link-exact-link
-                            :to="{ name: `datacontrol___${$i18n.locale}` }"
+                            :to="{ name: `monitoring___${$i18n.locale}` }"
                         >
                             Мониторинг бўлими
                         </nuxt-link>
@@ -54,7 +54,7 @@
                     <li>
                         <nuxt-link
                             nuxt-link-exact-link
-                            :to="{ name: `request___${$i18n.locale}` }"
+                            :to="{ name: `datacontrol___${$i18n.locale}` }"
                         >
                             Маълумотларни бошқариш
                         </nuxt-link>
@@ -78,7 +78,7 @@
                 </div>
 
                 <div class="header-right">
-                    <div class="notification" v-click-out="closeNot">
+                    <div class="notification" v-click-other="closeNot">
                         <button @click="openNot = true">
                             <img src="@/static/img/bell.png" alt="" />
                         </button>

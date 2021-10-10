@@ -9,7 +9,7 @@ button {
 button.primary {
     background-color: $gc;
     color: #fff;
-
+    border-radius: 4px;
     &:active {
         background: linear-gradient(
                 0deg,
@@ -289,13 +289,13 @@ button.primary {
                     line-height: 16px;
                     letter-spacing: 0.04em;
                     color: #a09b9a !important;
-                    padding: 4px 10px;
+                    padding: 4px 12px;
                     // opacity: 0.6;
                 }
                 th:first-child {
                     padding-left: 0px;
                 }
-                th:first-child {
+                th:last-child {
                     padding-right: 0px;
                 }
             }
@@ -303,7 +303,7 @@ button.primary {
         tbody {
             tr {
                 td {
-                    padding: 12px 10px;
+                    padding: 12px;
                     font-weight: 500;
                     font-size: 16px;
                     line-height: 24px;
@@ -313,7 +313,7 @@ button.primary {
                 td:first-child {
                     padding-left: 0px;
                 }
-                td:first-child {
+                td:last-child {
                     padding-right: 0px;
                 }
             }

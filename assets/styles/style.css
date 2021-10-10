@@ -7,6 +7,7 @@ button {
 button.primary {
   background-color: #e88243;
   color: #fff;
+  border-radius: 4px;
 }
 
 button.primary:active {
@@ -347,19 +348,19 @@ button.primary:hover {
   line-height: 16px;
   letter-spacing: 0.04em;
   color: #a09b9a !important;
-  padding: 4px 10px;
+  padding: 4px 12px;
 }
 
 .table-umd table thead tr th:first-child {
   padding-left: 0px;
 }
 
-.table-umd table thead tr th:first-child {
+.table-umd table thead tr th:last-child {
   padding-right: 0px;
 }
 
 .table-umd table tbody tr td {
-  padding: 12px 10px;
+  padding: 12px;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -370,7 +371,7 @@ button.primary:hover {
   padding-left: 0px;
 }
 
-.table-umd table tbody tr td:first-child {
+.table-umd table tbody tr td:last-child {
   padding-right: 0px;
 }
 
