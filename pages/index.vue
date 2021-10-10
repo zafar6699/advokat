@@ -40,22 +40,14 @@
                             {{ $t("year") }}
                         </button>
                     </div>
-                    <div class="choose">
-                        <div class="select">
-                            <div class="selectBtn" data-type="firstOptioana">
-                                2021
-                            </div>
-                            <div  class="selectDropdown scroll">
-                                <div class="option" data-type="1">
-                                    2020
-                                </div>
-                                <div class="option" data-type="1">
-                                    2019
-                                </div>
-                                <div class="option" data-type="1">
-                                    2021
-                                </div>
-                            </div>
+                    <div class="choose select">
+                        <div class="custom-select">
+                            <select>
+                                <option value="0">{{$t('year')}}</option>
+                                <option value="1">2101</option>
+                                <option value="2">2221</option>
+                              
+                            </select>
                         </div>
                     </div>
                 </div>

@@ -248,91 +248,6 @@ button.primary:hover {
   border: 0;
 }
 
-.select {
-  position: relative;
-}
-
-.select .selectBtn {
-  background: var(--bg1);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 3px;
-  width: 100%;
-  height: 48px;
-  padding: 12px;
-  cursor: pointer;
-  position: relative;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background: #f2f2f2;
-}
-
-.select .selectBtn:after {
-  content: "";
-  position: absolute;
-  top: 45%;
-  right: 15px;
-  width: 6px;
-  height: 6px;
-  -webkit-transform: translateY(-50%) rotate(45deg);
-  transform: translateY(-50%) rotate(45deg);
-  border-right: 2px solid #666;
-  border-bottom: 2px solid #666;
-  -webkit-transition: 0.2s ease;
-  transition: 0.2s ease;
-}
-
-.select .selectBtn.toggle {
-  border-radius: 3px 3px 0 0;
-}
-
-.select .selectBtn.toggle:after {
-  -webkit-transform: translateY(-50%) rotate(-135deg);
-  transform: translateY(-50%) rotate(-135deg);
-}
-
-.select .selectDropdown {
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  overflow-y: scroll !important;
-  max-height: 248px;
-  border-radius: 0 0 3px 3px;
-  overflow: hidden;
-  background: var(--bg1);
-  border-top: 1px solid #eee;
-  z-index: 1;
-  background: #fff;
-  -webkit-transform: scale(1, 0);
-  transform: scale(1, 0);
-  -webkit-transform-origin: top center;
-  transform-origin: top center;
-  visibility: hidden;
-  -webkit-transition: 0.2s ease;
-  transition: 0.2s ease;
-  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-}
-
-.select .selectDropdown .option {
-  padding: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  cursor: pointer;
-}
-
-.select .selectDropdown .option:hover {
-  background: #f3f2f2;
-}
-
-.select .selectDropdown.toggle {
-  visibility: visible;
-  -webkit-transform: scale(1, 1);
-  transform: scale(1, 1);
-}
-
 .table-umd table {
   width: 100%;
 }
@@ -385,5 +300,19 @@ button.primary:hover {
   background: #201918;
   border: 0;
   border-radius: 8px;
+}
+
+option {
+  color: #6666;
+  font-weight: bold;
+  padding: 5px;
+}
+
+option:hover {
+  color: red;
+}
+
+option {
+  border: 1px solid green;
 }
 /*# sourceMappingURL=style.css.map */
