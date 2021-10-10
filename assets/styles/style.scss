@@ -6,9 +6,9 @@ button {
     cursor: pointer;
     background-color: transparent;
 }
-button.primary {
+.primary {
     background-color: $gc;
-    color: #fff;
+    color: #fff !important;
     border-radius: 4px;
     &:active {
         background: linear-gradient(
@@ -22,7 +22,15 @@ button.primary {
         background-color: #f09047;
     }
 }
-
+.btn-orange {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    padding: 12px 54px;
+    color: #faf0ee;
+}
 div.form-group {
     margin-bottom: 24px;
     h4 {

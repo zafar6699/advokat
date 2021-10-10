@@ -4,19 +4,33 @@ button {
   background-color: transparent;
 }
 
-button.primary {
+.primary {
   background-color: #e88243;
-  color: #fff;
+  color: #fff !important;
   border-radius: 4px;
 }
 
-button.primary:active {
+.primary:active {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(28, 27, 27, 0.15)), to(rgba(28, 27, 27, 0.15))), #e88243 !important;
   background: linear-gradient(0deg, rgba(28, 27, 27, 0.15), rgba(28, 27, 27, 0.15)), #e88243 !important;
 }
 
-button.primary:hover {
+.primary:hover {
   background-color: #f09047;
+}
+
+.btn-orange {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 54px;
+  color: #faf0ee;
 }
 
 div.form-group {
