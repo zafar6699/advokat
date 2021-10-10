@@ -180,9 +180,9 @@
 </template>
 
 <script>
-import VueAdsPagination, { VueAdsPageButton } from "vue-ads-pagination";
 export default {
     layout: "admin",
+
     data() {
         return {
             route: [
@@ -229,9 +229,9 @@ export default {
                     kr: ""
                 }
             ],
-            page: 0,
+            page: 1,
             limit: 10,
-            lenght: 34
+            length: 123
         };
     },
 

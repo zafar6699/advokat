@@ -79,6 +79,37 @@ td.max-320 {
 
     color: #605856;
 }
+.table-pagination {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    .vue-ads-leading-loose {
+        display: none;
+    }
+
+    button {
+        width: 40px;
+        height: 40px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: #4d4d4d;
+        border-radius: 4px;
+        font-size: 16px;
+        line-height: 24px;
+        i {
+            font-size: 22px;
+        }
+        &:hover {
+            color: $gc;
+        }
+    }
+
+    button.vue-ads-text-white {
+        background-color: $gc;
+        color: #fff;
+    }
+}
 div.form-group {
     margin-bottom: 24px;
     h4 {
