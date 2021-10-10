@@ -216,12 +216,29 @@
                         <h3>Туманлар рўйхати</h3>
                     </div>
                     <div class="flex">
-                        <div class="card-row-tuman ">
-                            <div class="select">
-                                <select name="" id="">
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                </select>
+                        <div class="card ">
+                            <div
+                                class="
+                form-group
+            "
+                            >
+                                <div class="input-div">
+                                    <select>
+                                        <option
+                                            style="display: none;"
+                                            value=""
+                                            disabled
+                                            selected
+                                            >Viloyatni tanlang</option
+                                        >
+                                        <option value="1">All</option>
+                                        <option value="2">Toshkent</option>
+                                        <option value="3">Xorazm</option>
+                                    </select>
+                                </div>
+                                <h6 class="error-text">
+                                    Tanlanishi shart
+                                </h6>
                             </div>
                         </div>
                         <button class="add">Қўшиш</button>
