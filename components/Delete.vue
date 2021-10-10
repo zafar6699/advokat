@@ -1,23 +1,25 @@
 <template>
     <div>
         <div :class="isDelete ? 'fixvh block-fh' : 'fixvh'"></div>
-        <div :class="isDelete ? 'my-modalDelete open-modal' : 'my-modal'">
-            <div class="delete pa-5 pb-0">
+        <div
+            :class="
+                isDelete ? 'my-modalDelete delete-mod open-modal' : 'my-modal'
+            "
+        >
+            <div class="del-mod">
                 <p>
-                    Ishonchingiz komilmi
+                    Ҳақиқатдан ҳам малумотни ўчирмоқчимисиз?
                 </p>
-                <div>
-                    <div class="">
-                        <v-btn
-                            color="silver"
-                            class="otmena"
-                            @click="$emit('closeDelete')"
-                            >Bekor qilish</v-btn
-                        >
-                        <v-btn class="red" @click="$emit('deleteRequest')"
-                            >O'chirish</v-btn
-                        >
-                    </div>
+                <div class="btns">
+                    <button class="yes" @click="$emit('deleteRequest')">
+                        Йўқ
+                    </button>
+                    <button
+                        class="primary otmena"
+                        @click="$emit('closeDelete')"
+                    >
+                        Ҳа
+                    </button>
                 </div>
             </div>
         </div>

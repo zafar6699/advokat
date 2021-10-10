@@ -1,6 +1,11 @@
 <template>
     <div>
         <div class="control">
+            <Delete
+                @deleteRequest="deleteRequest"
+                @closeDelete="closeDelete"
+                :isDelete="isDelete"
+            />
             <div
                 @click="isRegion = false"
                 :class="isRegion ? 'fixvh block-fh' : 'fixvh'"
@@ -132,7 +137,12 @@
                                                         />
                                                     </svg>
                                                 </button>
-                                                <button class="delete">
+                                                <button
+                                                    @click="
+                                                        openDelete(item._id)
+                                                    "
+                                                    class="delete"
+                                                >
                                                     <svg
                                                         width="24"
                                                         height="24"
@@ -239,6 +249,7 @@ export default {
         return {
             step: 1,
             isRegion: false,
+            isDelete: false,
             name: {
                 uz: "",
                 kr: "",
@@ -323,6 +334,27 @@ export default {
                 })
                 .then(res => {
                     console.log("success");
+                });
+        },
+        openDelete(id) {
+            console.log(id);
+            this.isDelete = true;
+            this.id = id;
+        },
+        closeDelete() {
+            this.isDelete = false;
+        },
+        async deleteRequest() {
+            this.isDelete = false;
+            this.$axios
+                .$delete("region/" + this.id)
+                .then(async res => {
+                    let region = await this.$axios.$get(`region/get`);
+                    this.region = region.data;
+                    console.log(res);
+                })
+                .catch(err => {
+                    console.log(err);
                 });
         },
         openModalRegion() {
