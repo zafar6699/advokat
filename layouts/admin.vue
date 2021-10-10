@@ -1,7 +1,7 @@
 <template>
     <div>
         <Navbar />
-        <div class="admin-content">
+        <div class="admin-content" >
             <Nuxt />
         </div>
     </div>

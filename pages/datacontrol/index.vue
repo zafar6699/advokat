@@ -65,14 +65,14 @@
                                         </th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody v-if="region != null">
                                     <tr
-                                        v-for="(item, index) in data"
+                                        v-for="(item, index) in region"
                                         :key="index"
                                     >
-                                        <td>{{ item.uz }}</td>
-                                        <td>{{ item.cr }}</td>
-                                        <td>{{ item.ru }}</td>
+                                        <td>{{ item.name.uz }}</td>
+                                        <td>{{ item.name.kr }}</td>
+                                        <td>{{ item.name.ru }}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -85,58 +85,14 @@
                     </div>
                     <div>
                         <div class="card-row-tuman flex">
-                            <div class="card-3">
-                                <span>Вилоят номи</span>
-                                <div class="select">
-                                    <div
-                                        class="selectBtn"
-                                        id="h1"
-                                        data-type="firstOptioana"
-                                    >
-                                        Buxoro
-                                    </div>
-                                    <div class="selectDropdown scroll">
-                                        <div
-                                            class="option"
-                                            data-type="firstOption"
-                                        >
-                                            First option
-                                        </div>
-                                        <div
-                                            class="option"
-                                            data-type="secondOption"
-                                        >
-                                            Second option
-                                        </div>
-                                        <div
-                                            class="option"
-                                            data-type="thirdOption"
-                                        >
-                                            Third option
-                                        </div>
-                                        <div
-                                            class="option"
-                                            data-type="forthOption"
-                                        >
-                                            Forth option
-                                        </div>
-                                        <div
-                                            class="option"
-                                            data-type="fifthOption"
-                                        >
-                                            Fifth option
-                                        </div>
-                                        <div
-                                            class="option"
-                                            data-type="sixthOptionzzz"
-                                        >
-                                            12
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="select">
+                                <select name="" id="">
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                </select>
                             </div>
-                            <button class="add">Қўшиш</button>
                         </div>
+                        <button class="add">Қўшиш</button>
                     </div>
                     <div class="table-content">
                         <div class="table-umd">
@@ -188,6 +144,15 @@ export default {
                 kr: "",
                 ru: ""
             },
+            region: [
+                {
+                    name: {
+                        uz: "",
+                        kr: "",
+                        ru: ""
+                    }
+                }
+            ],
             header: [
                 {
                     uz: "Viloyatlar ro‘yxati",
@@ -209,13 +174,7 @@ export default {
                     ru: "Buxoro"
                 }
             ],
-            data: [
-                {
-                    uz: "Buxoro",
-                    cr: "Buxoro",
-                    ru: "Buxoro"
-                }
-            ],
+
             tabMenu: [
                 {
                     name: "Вилоятлар"
@@ -240,12 +199,16 @@ export default {
         };
     },
     async mounted() {
-        let name = await this.$axios.$get("region/get");
-        this.name = name.data;
-        console.log("assa", this.name);
+        console.log("assa", this.region);
+        let region = await this.$axios.$get("region/get");
+        this.region = region.data;
+        console.log("assa", this.region);
     },
     methods: {
         async addregion() {
+            this.region.forEach(item => {
+                item.name = this.name;
+            });
             await this.$axios.$post("region/add", this.region).then(res => {
                 console.log("success");
             });
@@ -264,11 +227,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.table-content {
-    padding: 16px 40px;
-    background: #f1f2f5;
-    border-radius: 8px;
-}
+// .table-content {
+//     padding: 16px 40px;
+//     background: #f1f2f5;
+//     border-radius: 8px;
+// }
 .control {
     .add {
         cursor: pointer;
@@ -321,11 +284,11 @@ export default {
         }
     }
     .region {
-        .table-content {
-            padding: 16px 40px;
-            background: #f1f2f5;
-            border-radius: 8px;
-        }
+        // .table-content {
+        //     padding: 16px 40px;
+        //     background: #f1f2f5;
+        //     border-radius: 8px;
+        // }
     }
     .district {
         .card-row-tuman {
@@ -337,9 +300,6 @@ export default {
                     font-size: 16px;
                     line-height: 16px;
                     color: #000000;
-                }
-                .select {
-                    margin: 8px 0 38px 0;
                 }
             }
         }
