@@ -8,7 +8,7 @@
         >
             <h4>Login</h4>
             <div class="input-div">
-                <input type="text" v-model.trim="$v.user.login.$model" />
+                <input type="text" v-model="$v.user.login.$model" />
             </div>
             <h6 v-if="!$v.user.login.required" class="error-text">
                 To'ldirish shart

@@ -95,6 +95,86 @@
                 </div>
 
                 <div class="header-right">
+                    <div>
+                        <div class="til">
+                            <button class=" flex">
+                                <span class="globus flex"
+                                    ><svg
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                            stroke="#1C1B1B"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                        <path
+                                            d="M2 12H22"
+                                            stroke="#1C1B1B"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                        <path
+                                            d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22C9.49872 19.2616 8.07725 15.708 8 12C8.07725 8.29203 9.49872 4.73835 12 2V2Z"
+                                            stroke="#1C1B1B"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                </span>
+                                <span v-if="$i18n.locale == 'uz'"
+                                    >O'zbekcha</span
+                                >
+                                <span v-if="$i18n.locale == 'kr'">Ўзбекча</span>
+                                <span v-if="$i18n.locale == 'ru'">Русский</span>
+                                <span class="til-icon flex">
+                                    <svg
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M7 10L12 15L17 10"
+                                            stroke="#11151E"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="til-menu">
+                                <div>
+                                    <ul>
+                                        <li>
+                                            <h6 @click.prevent="clickUz">
+                                                O'zbekcha
+                                            </h6>
+                                        </li>
+                                        <li>
+                                            <h6 @click.prevent="clickKiril">
+                                                Ўзбекча
+                                            </h6>
+                                        </li>
+                                        <li>
+                                            <h6 @click.prevent="clickRu">
+                                                Русский
+                                            </h6>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="notification" v-click-other="closeNot">
                         <button @click="openNot = true">
                             <img src="@/static/img/bell.png" alt="" />
@@ -441,6 +521,15 @@ export default {
     methods: {
         closeNot() {
             this.openNot = false;
+        },
+        clickUz() {
+            this.$i18n.setLocale("uz");
+        },
+        clickKiril() {
+            this.$i18n.setLocale("kr");
+        },
+        clickRu() {
+            this.$i18n.setLocale("ru");
         }
     }
 };

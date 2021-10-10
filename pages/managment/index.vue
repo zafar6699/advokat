@@ -3,7 +3,11 @@
         <div class="content-title">
             <h3>Фойдаланувчиларни бошқариш</h3>
 
-            <nuxt-link to="/" class="primary btn-orange">Яратиш</nuxt-link>
+            <nuxt-link
+                :to="{ name: `managment-add___${$i18n.locale}` }"
+                class="primary btn-orange"
+                >Яратиш</nuxt-link
+            >
         </div>
 
         <div class="card-row">
@@ -239,7 +243,9 @@ export default {
         this.$store.commit("CHANGE_ROUTE", this.route);
     },
     methods: {
-        pageChange() {}
+        pageChange(page) {
+            this.page = page;
+        }
     }
 };
 </script>

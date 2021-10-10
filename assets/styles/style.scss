@@ -4,6 +4,8 @@ $gc: #e88243;
 button {
     border: none;
     cursor: pointer;
+    border-radius: 4px;
+
     background-color: transparent;
 }
 .primary {
@@ -455,7 +457,10 @@ div.my-modal {
     width: 400px;
     transform: translate(-50%, -50%) scale(0);
     z-index: 25;
-    transition: 0.3s;
+    transition: 0.2s;
+}
+.delete-mod {
+    width: 410px !important;
 }
 
 .block-fh {
@@ -489,7 +494,7 @@ td.error-text {
     z-index: -5;
     display: flex;
     justify-content: center;
-    transition: 0.5s ease;
+    transition: 0.2s ease;
     align-items: center;
     opacity: 0;
 }
@@ -500,7 +505,7 @@ td.error-text {
     margin-bottom: 8rem;
     border-radius: 8px;
     background: white;
-    transition: transform 0.5s ease;
+    transition: transform 0.2s ease;
     padding: 3rem;
 }
 
@@ -516,6 +521,7 @@ td.error-text {
 }
 .delete-mod {
     .head {
+        margin-bottom: 32px;
         h3 {
             font-weight: 500;
             font-size: 24px;
@@ -530,95 +536,84 @@ td.error-text {
             font-size: 16px;
             line-height: 24px;
             color: #000000;
+            margin-bottom: 32px;
         }
-        .btns {
-            button {
-                padding: 12px 48px;
+        .flex-center {
+            display: flex;
+            justify-content: center;
+            .btns {
+                button {
+                    padding: 12px 48px;
+                }
+                button.no {
+                    margin-left: 16px;
+                    background: #ffffff;
+                    border: 1px solid #1c1b1b;
+                }
             }
         }
     }
 }
-
-// .select {
-//     select:focus{
-//         border: 1px solid red
-//     }
-//     .custom-select {
-//         position: relative;
-//         font-family: Arial;
-//     }
-
-//     .custom-select select {
-//         display: none; /*hide original SELECT element:*/
-//     }
-
-//     .select-selected {
-//         background: #f3f2f2;
-//         font-size: 16px;
-//         line-height: 24px;
-//         color: #000000 !important;
-//         border: 1px solid #e88243;
-//         box-sizing: border-box;
-//         border-radius: 4px;
-//     }
-
-//     /*style the arrow inside the select element:*/
-//     .select-selected:after {
-//         position: absolute;
-//         content: "";
-//         top: 14px;
-//         right: 14px;
-//         width: 8px;
-//         height: 8px;
-//         border-bottom: 1px solid #000;
-//         border-left: 1px solid #000;
-//         transform: rotate(-45deg);
-//         transition: 0.5s;
-//     }
-
-//     /*point the arrow upwards when the select box is open (active):*/
-//     .select-selected.select-arrow-active:after {
-//         top: 14px;
-//         right: 14px;
-//         width: 8px;
-//         height: 8px;
-//         border-bottom: 1px solid #000;
-//         border-left: 1px solid #000;
-//         // transform: rotate(135deg);
-//     }
-
-//     /*style the items (options), including the selected item:*/
-//     .select-items div,
-//     .select-selected {
-//         font-weight: normal;
-//         font-size: 16px;
-//         line-height: 24px;
-//         color: #201918;
-//         padding: 8px 16px;
-//         border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-//         cursor: pointer;
-//         user-select: none;
-//     }
-
-//     /*style items (options):*/
-//     .select-items {
-//         position: absolute;
-//         background: #ffffff;
-//         border-radius: 4px;
-
-//         top: 100%;
-//         left: 0;
-//         right: 0;
-//         z-index: 99;
-//     }
-
-//     /*hide the items when the select box is closed:*/
-//     .select-hide {
-//         display: none;
-//     }
-
-//     .select-items div:hover,
-//     .same-as-selected {
-//         background-color: rgba(0, 0, 0, 0.1);
-//     }
-// }
+.til {
+    padding: 24px 0;
+    margin-right: 24px;
+    position: relative;
+    .globus {
+        margin-right: 4px;
+    }
+    .til-icon {
+        transition: 0.2s;
+    }
+    button {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        color: #4f4f4f;
+        background: transparent;
+        border: none;
+    }
+    .til-menu {
+        position: absolute;
+        display: none;
+        left: 0;
+        width: 120px;
+        top: 72px;
+        z-index: 23;
+        div {
+            background: #ffffff;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            padding: 10px 15px;
+            padding-bottom: 0;
+            ul {
+                list-style: none;
+            }
+            h6 {
+                font-size: 14px;
+                line-height: 16px;
+                display: flex;
+                align-items: center;
+                color: #201918;
+                cursor: pointer;
+                margin-bottom: 16px;
+                padding: 0 10px;
+            }
+            h6:hover {
+                color: #e88243;
+            }
+        }
+    }
+    &:hover {
+        .til-icon {
+            transform: rotate(-180deg);
+        }
+        .til-menu {
+            display: block;
+        }
+    }
+}

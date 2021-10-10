@@ -88,7 +88,7 @@
                                 <span v-if="$i18n.locale == 'uz'"
                                     >O'zbekcha</span
                                 >
-                                <span v-if="$i18n.locale == 'cr'">Ўзбекча</span>
+                                <span v-if="$i18n.locale == 'kr'">Ўзбекча</span>
                                 <span v-if="$i18n.locale == 'ru'">Русский</span>
                                 <span class="til-icon flex">
                                     <svg
@@ -256,7 +256,7 @@ export default {
             this.$i18n.setLocale("uz");
         },
         clickKiril() {
-            this.$i18n.setLocale("cr");
+            this.$i18n.setLocale("kr");
         },
         clickRu() {
             this.$i18n.setLocale("ru");
@@ -403,69 +403,7 @@ header {
     .right {
         display: flex;
         align-items: center;
-        .til {
-            padding: 24px 0;
-            margin-right: 24px;
-            position: relative;
-            .globus {
-                margin-right: 4px;
-            }
-            .til-icon {
-                transition: 0.2s;
-            }
-            button {
-                font-style: normal;
-                font-weight: normal;
-                font-size: 16px;
-                line-height: 24px;
-                display: flex;
-                align-items: center;
-                color: #4f4f4f;
-                background: transparent;
-                border: none;
-            }
-            .til-menu {
-                position: absolute;
-                display: none;
-                left: 0;
-                width: 120px;
-                top: 72px;
-                z-index: 23;
-                div {
-                    background: #ffffff;
-                    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
-                    border-radius: 4px;
-                    display: flex;
-                    flex-direction: column;
-                    padding: 10px 15px;
-                    padding-bottom: 0;
-                    ul {
-                        list-style: none;
-                    }
-                    h6 {
-                        font-size: 14px;
-                        line-height: 16px;
-                        display: flex;
-                        align-items: center;
-                        color: #201918;
-                        cursor: pointer;
-                        margin-bottom: 16px;
-                        padding: 0 10px;
-                    }
-                    h6:hover {
-                        color: #e88243;
-                    }
-                }
-            }
-            &:hover {
-                .til-icon {
-                    transform: rotate(-180deg);
-                }
-                .til-menu {
-                    display: block;
-                }
-            }
-        }
+
         .profil {
             button {
                 cursor: pointer;
