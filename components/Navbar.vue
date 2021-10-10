@@ -132,7 +132,7 @@
                                 <span v-if="$i18n.locale == 'uz'"
                                     >O'zbekcha</span
                                 >
-                                <span v-if="$i18n.locale == 'cr'">Ўзбекча</span>
+                                <span v-if="$i18n.locale == 'kr'">Ўзбекча</span>
                                 <span v-if="$i18n.locale == 'ru'">Русский</span>
                                 <span class="til-icon flex">
                                     <svg

@@ -8,72 +8,9 @@ button {
 
     background-color: transparent;
 }
-.til {
-    padding: 24px 0;
-    margin-right: 24px;
-    position: relative;
-    .globus {
-        margin-right: 4px;
-    }
-    .til-icon {
-        transition: 0.2s;
-    }
-    button {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 24px;
-        display: flex;
-        align-items: center;
-        color: #4f4f4f;
-        background: transparent;
-        border: none;
-    }
-    .til-menu {
-        position: absolute;
-        display: none;
-        left: 0;
-        width: 120px;
-        top: 72px;
-        z-index: 23;
-        div {
-            background: #ffffff;
-            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
-            border-radius: 4px;
-            display: flex;
-            flex-direction: column;
-            padding: 10px 15px;
-            padding-bottom: 0;
-            ul {
-                list-style: none;
-            }
-            h6 {
-                font-size: 14px;
-                line-height: 16px;
-                display: flex;
-                align-items: center;
-                color: #201918;
-                cursor: pointer;
-                margin-bottom: 16px;
-                padding: 0 10px;
-            }
-            h6:hover {
-                color: #e88243;
-            }
-        }
-    }
-    &:hover {
-        .til-icon {
-            transform: rotate(-180deg);
-        }
-        .til-menu {
-            display: block;
-        }
-    }
-}
-button.primary {
+.primary {
     background-color: $gc;
-    color: #fff;
+    color: #fff !important;
     border-radius: 4px;
     &:active {
         background: linear-gradient(
@@ -87,7 +24,63 @@ button.primary {
         background-color: #f09047;
     }
 }
+.btn-orange {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    padding: 12px 54px;
+    color: #faf0ee;
+}
+.status-cancel {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
 
+    color: #eb5757;
+}
+.mt-50 {
+    margin-top: 50px;
+}
+td.max-320 {
+    max-width: 320px !important;
+}
+.table-person {
+    display: flex;
+    align-items: center;
+    div.img {
+        width: 48px;
+        height: 48px;
+        border-radius: 100%;
+        position: relative;
+        overflow: hidden;
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+    }
+    h5 {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        margin-left: 12px;
+        color: #605856;
+    }
+}
+.title-small {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+
+    color: #605856;
+}
 div.form-group {
     margin-bottom: 24px;
     h4 {
@@ -527,6 +520,69 @@ td.error-text {
                     border: 1px solid #1c1b1b;
                 }
             }
+        }
+    }
+}
+.til {
+    padding: 24px 0;
+    margin-right: 24px;
+    position: relative;
+    .globus {
+        margin-right: 4px;
+    }
+    .til-icon {
+        transition: 0.2s;
+    }
+    button {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        color: #4f4f4f;
+        background: transparent;
+        border: none;
+    }
+    .til-menu {
+        position: absolute;
+        display: none;
+        left: 0;
+        width: 120px;
+        top: 72px;
+        z-index: 23;
+        div {
+            background: #ffffff;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            padding: 10px 15px;
+            padding-bottom: 0;
+            ul {
+                list-style: none;
+            }
+            h6 {
+                font-size: 14px;
+                line-height: 16px;
+                display: flex;
+                align-items: center;
+                color: #201918;
+                cursor: pointer;
+                margin-bottom: 16px;
+                padding: 0 10px;
+            }
+            h6:hover {
+                color: #e88243;
+            }
+        }
+    }
+    &:hover {
+        .til-icon {
+            transform: rotate(-180deg);
+        }
+        .til-menu {
+            display: block;
         }
     }
 }

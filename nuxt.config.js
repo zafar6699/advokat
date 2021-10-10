@@ -25,6 +25,7 @@ export default {
     plugins: [
         "@/plugins/clickOut.js",
         "@/plugins/vuelidate.js",
+        "@/plugins/pagination.js",
         "@/plugins/v-mask.js"
     ],
 
@@ -41,14 +42,14 @@ export default {
                 file: "ru.js"
             },
             {
-                code: "cr",
-                file: "cr.js"
+                code: "kr",
+                file: "kr.js"
             }
         ],
         lazy: true,
         langDir: "lang/",
         strategy: "prefix_except_default",
-        defaultLocale: "uz"
+        defaultLocale: "kr"
     },
 
     // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules

@@ -1,7 +1,7 @@
 <template>
     <div>
         <Navbar />
-        <div class="admin-content" >
+        <div class="admin-content">
             <Nuxt />
         </div>
     </div>
@@ -9,38 +9,11 @@
 
 <script>
 export default {
-    mounted() {
-        const select = document.querySelectorAll(".selectBtn");
-        const option = document.querySelectorAll(".option");
-        const cont = document.querySelectorAll(".selectDropdown");
-        const con = document.querySelector(".content-title");
-        let index = 1;
-
-        select.forEach(a => {
-            a.addEventListener("click", b => {
-                const next = b.target.nextElementSibling;
-                next.classList.toggle("toggle");
-
-                next.style.zIndex = index++;
-
-                b.preventDefault();
-            });
-        });
-
-        option.forEach(a => {
-            a.addEventListener("click", b => {
-                b.target.parentElement.classList.remove("toggle");
-
-                const parent = b.target.closest(".select").children[0];
-                parent.setAttribute(
-                    "data-type",
-                    b.target.getAttribute("data-type")
-                );
-                parent.innerText = b.target.innerText;
-
-                b.preventDefault();
-            });
-        });
+    async mounted() {
+        await this.$axios.setHeader(
+            "token",
+            "X-Token ea4df09cf4921dcdaa03584374f93ad0940038758dc3bb8352030ffe03f36a90"
+        );
     },
     methods: {}
 };

@@ -5,107 +5,96 @@ button {
   background-color: transparent;
 }
 
-.til {
-  padding: 24px 0;
-  margin-right: 24px;
-  position: relative;
-}
-
-.til .globus {
-  margin-right: 4px;
-}
-
-.til .til-icon {
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-
-.til button {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #4f4f4f;
-  background: transparent;
-  border: none;
-}
-
-.til .til-menu {
-  position: absolute;
-  display: none;
-  left: 0;
-  width: 120px;
-  top: 72px;
-  z-index: 23;
-}
-
-.til .til-menu div {
-  background: #ffffff;
-  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 10px 15px;
-  padding-bottom: 0;
-}
-
-.til .til-menu div ul {
-  list-style: none;
-}
-
-.til .til-menu div h6 {
-  font-size: 14px;
-  line-height: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #201918;
-  cursor: pointer;
-  margin-bottom: 16px;
-  padding: 0 10px;
-}
-
-.til .til-menu div h6:hover {
-  color: #e88243;
-}
-
-.til:hover .til-icon {
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
-}
-
-.til:hover .til-menu {
-  display: block;
-}
-
-button.primary {
+.primary {
   background-color: #e88243;
-  color: #fff;
+  color: #fff !important;
   border-radius: 4px;
 }
 
-button.primary:active {
+.primary:active {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(28, 27, 27, 0.15)), to(rgba(28, 27, 27, 0.15))), #e88243 !important;
   background: linear-gradient(0deg, rgba(28, 27, 27, 0.15), rgba(28, 27, 27, 0.15)), #e88243 !important;
 }
 
-button.primary:hover {
+.primary:hover {
   background-color: #f09047;
+}
+
+.btn-orange {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 54px;
+  color: #faf0ee;
+}
+
+.status-cancel {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #eb5757;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+td.max-320 {
+  max-width: 320px !important;
+}
+
+.table-person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.table-person div.img {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.table-person div.img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.table-person h5 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 12px;
+  color: #605856;
+}
+
+.title-small {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #605856;
 }
 
 div.form-group {
@@ -677,5 +666,93 @@ td.error-text p {
   margin-left: 16px;
   background: #ffffff;
   border: 1px solid #1c1b1b;
+}
+
+.til {
+  padding: 24px 0;
+  margin-right: 24px;
+  position: relative;
+}
+
+.til .globus {
+  margin-right: 4px;
+}
+
+.til .til-icon {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.til button {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #4f4f4f;
+  background: transparent;
+  border: none;
+}
+
+.til .til-menu {
+  position: absolute;
+  display: none;
+  left: 0;
+  width: 120px;
+  top: 72px;
+  z-index: 23;
+}
+
+.til .til-menu div {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px 15px;
+  padding-bottom: 0;
+}
+
+.til .til-menu div ul {
+  list-style: none;
+}
+
+.til .til-menu div h6 {
+  font-size: 14px;
+  line-height: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #201918;
+  cursor: pointer;
+  margin-bottom: 16px;
+  padding: 0 10px;
+}
+
+.til .til-menu div h6:hover {
+  color: #e88243;
+}
+
+.til:hover .til-icon {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.til:hover .til-menu {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-if="region != null">
         <div class="control">
             <Delete
                 @deleteRequest="deleteRequest"
@@ -301,7 +301,7 @@ export default {
                     value: {
                         uz: "Ma'lumotlarni boshqarish",
                         kr: "Маълумотларни бошқариш",
-                        ru: "Route_ru"
+                        ru: "Управление данными"
                     }
                 }
             ],
@@ -315,15 +315,7 @@ export default {
                 kr: "",
                 ru: ""
             },
-            region: [
-                {
-                    name: {
-                        uz: "",
-                        kr: "",
-                        ru: ""
-                    }
-                }
-            ],
+            region: null,
             header: [
                 {
                     uz: "Viloyatlar ro‘yxati",
