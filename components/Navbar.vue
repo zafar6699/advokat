@@ -588,6 +588,7 @@ div.admin-header {
     background-color: #fff;
     width: 100%;
     height: 72px;
+    z-index: 12;
     div.header-title {
         ul {
             list-style-type: none;

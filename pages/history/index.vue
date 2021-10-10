@@ -13,7 +13,6 @@
                             class="
                 form-group
             "
-                            :class="{ 'form-error': $v.user.login.$error }"
                         >
                             <h4>Логин</h4>
                             <div class="input-div">
@@ -51,8 +50,7 @@
                         </div>
                     </div>
 
-                    <div class="card-4 form-froup">
-                        <h4>sa</h4>
+                    <div class="card-4 flex-end form-froup">
                         <div class="input-div flex search">
                             <button class="primary search-bt">
                                 {{ $t("search") }}
@@ -91,7 +89,7 @@
                     <thead>
                         <tr>
                             <th v-for="(item, index) in header" :key="index">
-                                {{ item[$i18n.locale] }}
+                                {{ item.uz }}
                             </th>
                         </tr>
                     </thead>
@@ -161,27 +159,11 @@ export default {
             ],
             data: [
                 {
-                    name: "00123 (Муҳаммадқодиров Муҳамммад  Муҳаммадалиевич)r",
-                    fam: "15.09.2021:15:15:45",
+                    name: "00121д  Муҳаммадалиевич)r",
+                    fam: "15.09.2115:45",
                     address: "Kalelin",
-                    address: "Паролни алмаштирди",
-                    phone: "+009901166699"
-                },
-                {
-                    name: "Zafar",
-                    fam: "Qalandarov",
-                    address: "Kalelin",
-                    fam: "Qalandarov",
-                    address: "Kalelin",
-                    phone: "+009901166699"
-                },
-                {
-                    name: "Zafar",
-                    fam: "Qalandarov",
-                    address: "Kalelin",
-                    fam: "Qalandarov",
-                    address: "Kalelin",
-                    phone: "+009901166699"
+                    address: "Парол1рди",
+                    phone: "+0199"
                 }
             ]
         };

@@ -523,6 +523,16 @@ td.error-text {
         }
     }
 }
+.flex-end {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .til {
     padding: 24px 0;
     margin-right: 24px;
