@@ -74,7 +74,24 @@
         <div class="admin-header">
             <div class="header-inner">
                 <div class="header-title">
-                    <h4>Фойдаланувчиларни бошқариш</h4>
+                    <ul v-if="route.length > 0">
+                        <li
+                            v-for="(item, index) in route"
+                            :key="index"
+                            v-if="index < route.length - 1"
+                        >
+                            <nuxt-link
+                                :to="{ name: item.url + `___` + $i18n.locale }"
+                            >
+                                {{ item.value[$i18n.locale] }}
+                            </nuxt-link>
+                            <span class="line"></span>
+                        </li>
+
+                        <li>
+                            {{ route[route.length - 1].value[$i18n.locale] }}
+                        </li>
+                    </ul>
                 </div>
 
                 <div class="header-right">
@@ -416,6 +433,11 @@ export default {
             openNot: false
         };
     },
+    computed: {
+        route() {
+            return this.$store.state.route;
+        }
+    },
     methods: {
         closeNot() {
             this.openNot = false;
@@ -474,15 +496,43 @@ div.admin-header {
     position: fixed;
     top: 0;
     left: 0;
-
+    background-color: #fff;
     width: 100%;
     height: 72px;
     div.header-title {
-        h4 {
+        ul {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            span.line {
+                height: 10px;
+                width: 1px;
+                background-color: #605856;
+                margin: 0px 5px;
+            }
+        }
+        li {
             font-weight: normal;
             font-size: 14px;
             line-height: 16px;
             color: #000000;
+            display: inline-flex;
+            align-items: center;
+            a {
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 16px;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                text-align: center;
+
+                color: #9d9392;
+
+                &:hover {
+                    color: $gc;
+                }
+            }
         }
     }
     div.header-inner {
