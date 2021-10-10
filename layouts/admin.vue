@@ -27,20 +27,6 @@ export default {
             });
         });
 
-        // document.addEventListener("click", e => {
-        //     alert('as')
-        //     if (e.target.id !== "h1")
-        //         for (let i = 0; i < cont.length; i++) {
-        //             cont[i].classList.remove('toggle');
-        //         }
-        //     // else {
-        //     //     for (let i = 0; i < h1.length; i++) {
-        //     //         cont[i].addEventListener("click", () => {
-        //     //             h1[i].className = "blue";
-        //     //         });
-        //     //     }
-        //     // }
-        // });
         option.forEach(a => {
             a.addEventListener("click", b => {
                 b.target.parentElement.classList.remove("toggle");
@@ -65,5 +51,6 @@ div.admin-content {
     margin-left: 310px;
     margin-top: 72px;
     padding: 20px 40px;
+    min-height: calc(100vh - 72px);
 }
 </style>

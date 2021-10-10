@@ -9,7 +9,7 @@ button {
 button.primary {
     background-color: $gc;
     color: #fff;
-
+    border-radius: 4px;
     &:active {
         background: linear-gradient(
                 0deg,
@@ -20,6 +20,88 @@ button.primary {
     }
     &:hover {
         background-color: #f09047;
+    }
+}
+
+div.form-group {
+    margin-bottom: 24px;
+    h4 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 8px;
+        color: #201918;
+    }
+    div.input-div {
+        input {
+            background: #e7e8eb;
+            border-radius: 4px;
+            height: 48px;
+            padding: 0px 16px;
+            width: 100%;
+            border: none;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            color: #201918;
+            &::placeholder {
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 24px;
+
+                color: #605856;
+            }
+            &:focus {
+                outline: none;
+                border: 1px solid #e88243;
+                background: #fff;
+            }
+        }
+        select {
+            background: #e7e8eb;
+            border-radius: 4px;
+            height: 48px;
+            padding: 0px 16px;
+            width: 100%;
+            border: none;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            color: #201918;
+            &::placeholder {
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 24px;
+
+                color: #605856;
+            }
+            &:focus {
+                outline: none;
+                border: 1px solid #e88243;
+                background: #fff;
+            }
+        }
+    }
+
+    h6.error-text {
+        display: none;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        margin-top: 4px;
+        color: #f94040;
+    }
+}
+
+div.form-error {
+    div.input-div {
+        input {
+            border: 1px solid #f94040 !important;
+        }
+    }
+    h6.error-text {
+        display: block !important;
     }
 }
 
@@ -215,13 +297,13 @@ button.primary {
                     line-height: 16px;
                     letter-spacing: 0.04em;
                     color: #a09b9a !important;
-                    padding: 4px 10px;
+                    padding: 4px 12px;
                     // opacity: 0.6;
                 }
                 th:first-child {
                     padding-left: 0px;
                 }
-                th:first-child {
+                th:last-child {
                     padding-right: 0px;
                 }
             }
@@ -229,7 +311,7 @@ button.primary {
         tbody {
             tr {
                 td {
-                    padding: 12px 10px;
+                    padding: 12px;
                     font-weight: 500;
                     font-size: 16px;
                     line-height: 24px;
@@ -239,7 +321,7 @@ button.primary {
                 td:first-child {
                     padding-left: 0px;
                 }
-                td:first-child {
+                td:last-child {
                     padding-right: 0px;
                 }
             }
@@ -257,19 +339,7 @@ button.primary {
     border: 0;
     border-radius: 8px;
 }
-option {
-    color: #6666;
-    font-weight: bold;
-    padding: 5px;
-}
 
-option:hover {
-    color: red;
-}
-
-option {
-    border: 1px solid green;
-}
 // .select {
 //     select:focus{
 //         border: 1px solid red

@@ -9,19 +9,18 @@
                 :class="isModalSign ? 'my-modalDelete open-modal' : 'my-modal'"
             >
                 <div class="modal">
-                    <h3>{{$t('sign')}}</h3>
+                    <h3>{{ $t("sign") }}</h3>
                     <div class="form">
                         <div>
-                            <span>{{$t('login')}}</span>
+                            <span>{{ $t("login") }}</span>
                             <input type="text" />
                         </div>
                         <div>
-                            <span>{{$t('password')}}</span>
+                            <span>{{ $t("password") }}</span>
                             <input type="password" />
                         </div>
-                        <button>{{$t('sign')}}</button>
+                        <button>{{ $t("sign") }}</button>
                     </div>
-                    
                 </div>
             </div>
             <div class="umd-container">
@@ -37,17 +36,17 @@
                         <ul>
                             <li>
                                 <a href="/#chart">
-                                    {{$t('statistic')}}
+                                    {{ $t("statistic") }}
                                 </a>
                             </li>
                             <li>
                                 <a href="/#news">
-                                    {{$t('news')}}
+                                    {{ $t("news") }}
                                 </a>
                             </li>
                             <li>
                                 <a href="/#havola">
-                                     {{$t('portals')}}
+                                    {{ $t("portals") }}
                                 </a>
                             </li>
                         </ul>
@@ -134,7 +133,7 @@
                         <div :class="isProfil ? ' profil open' : 'profil'">
                             <button v-click-out="hide" @click="clickProfil">
                                 <!-- <img src="@/static/img/avatar.gif" alt="" /> -->
-                               {{$t('kabinet')}}
+                                {{ $t("kabinet") }}
                             </button>
                             <div v-if="isProfil" class="setting notauth">
                                 <button class="log-btn" @click="openModalSign">
@@ -160,9 +159,8 @@
                                             />
                                         </svg>
                                     </span>
-                                    {{$t('sign')}}
+                                    {{ $t("sign") }}
                                 </button>
-                              
                             </div>
                             <!-- <div v-if="isProfil" class="setting">
                                 <nuxt-link to="/">
@@ -233,12 +231,11 @@
 </template>
 
 <script>
-
 export default {
     data() {
         return {
             isProfil: false,
-            isModalSign: false,
+            isModalSign: false
         };
     },
     methods: {
@@ -251,7 +248,7 @@ export default {
         closeModalSign() {
             this.isModalSign = false;
         },
-     
+
         clickProfil() {
             this.isProfil = !this.isProfil;
         },
@@ -277,7 +274,7 @@ export default {
         color: #000000;
         margin-bottom: 24px;
     }
-    .reg{
+    .reg {
         margin-bottom: 0 !important;
     }
     .form {
@@ -303,7 +300,7 @@ export default {
                 color: #201918;
                 &:focus {
                     border: 0;
-                    outline: 1px solid #E88243;
+                    outline: 1px solid #e88243;
                 }
             }
         }
@@ -321,7 +318,6 @@ export default {
             cursor: pointer;
         }
     }
- 
 }
 .open {
     top: 0;
@@ -360,7 +356,6 @@ export default {
             }
         }
     }
-  
 }
 
 header {

@@ -7,6 +7,7 @@ button {
 button.primary {
   background-color: #e88243;
   color: #fff;
+  border-radius: 4px;
 }
 
 button.primary:active {
@@ -16,6 +17,130 @@ button.primary:active {
 
 button.primary:hover {
   background-color: #f09047;
+}
+
+div.form-group {
+  margin-bottom: 24px;
+}
+
+div.form-group h4 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 8px;
+  color: #201918;
+}
+
+div.form-group div.input-div input {
+  background: #e7e8eb;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0px 16px;
+  width: 100%;
+  border: none;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #201918;
+}
+
+div.form-group div.input-div input::-webkit-input-placeholder {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #605856;
+}
+
+div.form-group div.input-div input:-ms-input-placeholder {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #605856;
+}
+
+div.form-group div.input-div input::-ms-input-placeholder {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #605856;
+}
+
+div.form-group div.input-div input::placeholder {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #605856;
+}
+
+div.form-group div.input-div input:focus {
+  outline: none;
+  border: 1px solid #e88243;
+  background: #fff;
+}
+
+div.form-group div.input-div select {
+  background: #e7e8eb;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0px 16px;
+  width: 100%;
+  border: none;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #201918;
+}
+
+div.form-group div.input-div select::-webkit-input-placeholder {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #605856;
+}
+
+div.form-group div.input-div select:-ms-input-placeholder {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #605856;
+}
+
+div.form-group div.input-div select::-ms-input-placeholder {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #605856;
+}
+
+div.form-group div.input-div select::placeholder {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #605856;
+}
+
+div.form-group div.input-div select:focus {
+  outline: none;
+  border: 1px solid #e88243;
+  background: #fff;
+}
+
+div.form-group h6.error-text {
+  display: none;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 4px;
+  color: #f94040;
+}
+
+div.form-error div.input-div input {
+  border: 1px solid #f94040 !important;
+}
+
+div.form-error h6.error-text {
+  display: block !important;
 }
 
 .umd-container {
@@ -262,19 +387,19 @@ button.primary:hover {
   line-height: 16px;
   letter-spacing: 0.04em;
   color: #a09b9a !important;
-  padding: 4px 10px;
+  padding: 4px 12px;
 }
 
 .table-umd table thead tr th:first-child {
   padding-left: 0px;
 }
 
-.table-umd table thead tr th:first-child {
+.table-umd table thead tr th:last-child {
   padding-right: 0px;
 }
 
 .table-umd table tbody tr td {
-  padding: 12px 10px;
+  padding: 12px;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -285,7 +410,7 @@ button.primary:hover {
   padding-left: 0px;
 }
 
-.table-umd table tbody tr td:first-child {
+.table-umd table tbody tr td:last-child {
   padding-right: 0px;
 }
 
@@ -299,19 +424,5 @@ button.primary:hover {
   background: #201918;
   border: 0;
   border-radius: 8px;
-}
-
-option {
-  color: #6666;
-  font-weight: bold;
-  padding: 5px;
-}
-
-option:hover {
-  color: red;
-}
-
-option {
-  border: 1px solid green;
 }
 /*# sourceMappingURL=style.css.map */
