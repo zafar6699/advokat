@@ -5,6 +5,7 @@
                 <img src="@/static/img/banner.png" alt="" />
             </div>
             <div class="umd-container umd">
+                
                 <div class="content-banner">
                     <h1>{{ $t("reestr") }}</h1>
                     <div class="form">
@@ -15,165 +16,40 @@
                                     :placeholder="$t('fullname')"
                                 />
                             </div>
+                            <div class="card select">
+                                <div class="custom-select">
+                                    <select>
+                                        <option value="0">{{
+                                            $t("region")
+                                        }}</option>
+                                        <option value="1">2101</option>
+                                        <option value="2">2221</option>
+                                    </select>
+                                </div>
+                            </div>
                             <div class="card">
                                 <div class="select">
-                                    <div
-                                        class="selectBtn"
-                                        data-type="firstOptioana"
-                                    >
-                                        {{ $t("region") }}
-                                    </div>
-                                    <div class="selectDropdown scroll">
-                                        <div
-                                            class="option"
-                                            data-type="firstOption"
-                                        >
-                                            First option
-                                        </div>
-                                        <div
-                                            class="option"
-                                            data-type="secondOption"
-                                        >
-                                            Second option
-                                        </div>
-                                        <div
-                                            class="option"
-                                            data-type="thirdOption"
-                                        >
-                                            Third option
-                                        </div>
-                                        <div
-                                            class="option"
-                                            data-type="forthOption"
-                                        >
-                                            Forth option
-                                        </div>
-                                        <div
-                                            class="option"
-                                            data-type="fifthOption"
-                                        >
-                                            Fifth option
-                                        </div>
-                                        <div
-                                            class="option"
-                                            data-type="sixthOptionzzz"
-                                        >
-                                            12
-                                        </div>
+                                    <div class="custom-select">
+                                        <select>
+                                            <option value="0">{{
+                                                $t("region")
+                                            }}</option>
+                                            <option value="1">2101</option>
+                                            <option value="2">2221</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="select">
-                                    <div
-                                        class="selectBtn"
-                                        data-type="firstOptioana"
-                                    >
-                                        {{ $t("district") }}
-                                    </div>
-                                    <div class="selectDropdown scroll">
-                                        <div
-                                            class="option"
-                                            data-type="firstOption"
-                                        >
-                                            First option
-                                        </div>
-                                        <div
-                                            class="option"
-                                            data-type="secondOption"
-                                        >
-                                            Second option
-                                        </div>
-                                        <div
-                                            class="option"
-                                            data-type="secondOption"
-                                        >
-                                            Second option
-                                        </div>
-                                        <div
-                                            class="option"
-                                            data-type="secondOption"
-                                        >
-                                            Second option
-                                        </div>
-                                        <div
-                                            class="option"
-                                            data-type="secondOption"
-                                        >
-                                            Second option
-                                        </div>
-                                        <div
-                                            class="option"
-                                            data-type="thirdOption"
-                                        >
-                                            Third option
-                                        </div>
-                                        <div
-                                            class="option"
-                                            data-type="forthOption"
-                                        >
-                                            Forth option
-                                        </div>
-                                        <div
-                                            class="option"
-                                            data-type="fifthOption"
-                                        >
-                                            Fifth option
-                                        </div>
-                                        <div
-                                            class="option"
-                                            data-type="sixthOptionzzz"
-                                        >
-                                            12
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="select">
-                                    <div
-                                        class="selectBtn"
-                                        data-type="firstOptioana"
-                                    >
-                                        {{ $t("tuzilma") }}
-                                    </div>
-                                    <div class="selectDropdown scroll">
-                                        <div
-                                            class="option"
-                                            data-type="firstOption"
-                                        >
-                                            First option
-                                        </div>
-                                        <div
-                                            class="option"
-                                            data-type="secondOption"
-                                        >
-                                            Second option
-                                        </div>
-                                        <div
-                                            class="option"
-                                            data-type="thirdOption"
-                                        >
-                                            Third option
-                                        </div>
-                                        <div
-                                            class="option"
-                                            data-type="forthOption"
-                                        >
-                                            Forth option
-                                        </div>
-                                        <div
-                                            class="option"
-                                            data-type="fifthOption"
-                                        >
-                                            Fifth option
-                                        </div>
-                                        <div
-                                            class="option"
-                                            data-type="sixthOptionzzz"
-                                        >
-                                            12
-                                        </div>
+                                    <div class="custom-select">
+                                        <select>
+                                            <option value="0">{{
+                                                $t("region")
+                                            }}</option>
+                                            <option value="1">2101</option>
+                                            <option value="2">2221</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -208,99 +84,99 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.card {
-    .option,
-    .selectBtn {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 24px;
-        color: #898e9a;
-        border: 1px solid #f2f2f2;
-    }
-    .select {
-        position: relative;
-        // margin-bottom: 15px;
-    }
-    .select .selectBtn {
-        background: var(--bg1);
-        box-sizing: border-box;
-        border-radius: 3px;
-        width: 100%;
-        height: 48px;
-        padding: 12px;
-        cursor: pointer;
-        position: relative;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        background: #f2f2f2;
-    }
-    .select .selectBtn:after {
-        content: "";
-        position: absolute;
-        top: 45%;
-        right: 15px;
-        width: 6px;
-        height: 6px;
-        -webkit-transform: translateY(-50%) rotate(45deg);
-        transform: translateY(-50%) rotate(45deg);
-        border-right: 2px solid #666;
-        border-bottom: 2px solid #666;
-        transition: 0.2s ease;
-    }
-    .selectBtn:hover {
-        border: 1px solid #e88243;
-        .selectBtn::after {
-            border-right: 2px solid #000 !important;
-            border-bottom: 2px solid #000 !important;
-        }
-    }
-    .select .selectBtn.toggle {
-        border-radius: 3px 3px 0 0;
-    }
-    .select .selectBtn.toggle:after {
-        -webkit-transform: translateY(-50%) rotate(-135deg);
-        transform: translateY(-50%) rotate(-135deg);
-    }
-    .select .selectDropdown {
-        position: absolute;
-        top: 100%;
-        width: 100%;
-        overflow-y: scroll !important;
-        max-height: 248px;
+// .card {
+//     .option,
+//     .selectBtn {
+//         font-style: normal;
+//         font-weight: normal;
+//         font-size: 16px;
+//         line-height: 24px;
+//         color: #898e9a;
+//         border: 1px solid #f2f2f2;
+//     }
+//     .select {
+//         position: relative;
+//         // margin-bottom: 15px;
+//     }
+//     .select .selectBtn {
+//         background: var(--bg1);
+//         box-sizing: border-box;
+//         border-radius: 3px;
+//         width: 100%;
+//         height: 48px;
+//         padding: 12px;
+//         cursor: pointer;
+//         position: relative;
+//         -webkit-user-select: none;
+//         -moz-user-select: none;
+//         -ms-user-select: none;
+//         user-select: none;
+//         background: #f2f2f2;
+//     }
+//     .select .selectBtn:after {
+//         content: "";
+//         position: absolute;
+//         top: 45%;
+//         right: 15px;
+//         width: 6px;
+//         height: 6px;
+//         -webkit-transform: translateY(-50%) rotate(45deg);
+//         transform: translateY(-50%) rotate(45deg);
+//         border-right: 2px solid #666;
+//         border-bottom: 2px solid #666;
+//         transition: 0.2s ease;
+//     }
+//     .selectBtn:hover {
+//         border: 1px solid #e88243;
+//         .selectBtn::after {
+//             border-right: 2px solid #000 !important;
+//             border-bottom: 2px solid #000 !important;
+//         }
+//     }
+//     .select .selectBtn.toggle {
+//         border-radius: 3px 3px 0 0;
+//     }
+//     .select .selectBtn.toggle:after {
+//         -webkit-transform: translateY(-50%) rotate(-135deg);
+//         transform: translateY(-50%) rotate(-135deg);
+//     }
+//     .select .selectDropdown {
+//         position: absolute;
+//         top: 100%;
+//         width: 100%;
+//         overflow-y: scroll !important;
+//         max-height: 248px;
 
-        border-radius: 0 0 3px 3px;
-        overflow: hidden;
-        background: var(--bg1);
-        border-top: 1px solid #eee;
-        z-index: 1;
-        background: #fff;
-        -webkit-transform: scale(1, 0);
-        transform: scale(1, 0);
-        -webkit-transform-origin: top center;
-        transform-origin: top center;
-        visibility: hidden;
-        transition: 0.2s ease;
-        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-    }
+//         border-radius: 0 0 3px 3px;
+//         overflow: hidden;
+//         background: var(--bg1);
+//         border-top: 1px solid #eee;
+//         z-index: 1;
+//         background: #fff;
+//         -webkit-transform: scale(1, 0);
+//         transform: scale(1, 0);
+//         -webkit-transform-origin: top center;
+//         transform-origin: top center;
+//         visibility: hidden;
+//         transition: 0.2s ease;
+//         box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+//     }
 
-    .select .selectDropdown .option {
-        padding: 10px;
-        box-sizing: border-box;
-        cursor: pointer;
-    }
-    .select .selectDropdown .option:hover {
-        background: #f3f2f2;
-        // color: #e88243;
-    }
-    .select .selectDropdown.toggle {
-        visibility: visible;
-        -webkit-transform: scale(1, 1);
-        transform: scale(1, 1);
-    }
-}
+//     .select .selectDropdown .option {
+//         padding: 10px;
+//         box-sizing: border-box;
+//         cursor: pointer;
+//     }
+//     .select .selectDropdown .option:hover {
+//         background: #f3f2f2;
+//         // color: #e88243;
+//     }
+//     .select .selectDropdown.toggle {
+//         visibility: visible;
+//         -webkit-transform: scale(1, 1);
+//         transform: scale(1, 1);
+//     }
+// }
 
 .banner {
     width: 100%;
