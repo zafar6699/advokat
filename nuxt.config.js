@@ -22,7 +22,11 @@ export default {
     css: ["@/assets/styles/style.scss", "@/assets/styles/font.css"],
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-    plugins: ["@/plugins/clickOut.js"],
+    plugins: [
+        "@/plugins/clickOut.js",
+        "@/plugins/vuelidate.js",
+        "@/plugins/v-mask.js"
+    ],
 
     // Auto import components: https://go.nuxtjs.dev/config-components
     components: true,
@@ -66,7 +70,6 @@ export default {
     axios: {
         baseURL: "https://advokatrestr.herokuapp.com/api/"
     },
-    
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {}
