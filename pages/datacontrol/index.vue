@@ -8,20 +8,62 @@
             <div :class="isRegion ? 'my-modalDelete open-modal' : 'my-modal'">
                 <div class="modal">
                     <h3>Viloyat qo'shish</h3>
-                    <div class="form">
-                        <div>
-                            <span>O'zbekcha</span>
-                            <input v-model="name.uz" type="text" />
+                    <div class="formx">
+                        <div
+                            class="
+                form-group
+            "
+                            :class="{ 'form-error': $v.name.uz.$error }"
+                        >
+                            <h4>O'zbekcha</h4>
+                            <div class="input-div">
+                                <input
+                                    type="text"
+                                    v-model.trim="$v.name.uz.$model"
+                                />
+                            </div>
+                            <h6 v-if="!$v.name.uz.required" class="error-text">
+                                To'ldirish shart
+                            </h6>
                         </div>
-                        <div>
-                            <span>Ўзбекча</span>
-                            <input v-model="name.kr" type="text" />
+                        <div
+                            class="
+                form-group
+            "
+                            :class="{ 'form-error': $v.name.kr.$error }"
+                        >
+                            <h4>Ўзбекча</h4>
+                            <div class="input-div">
+                                <input
+                                    type="text"
+                                    v-model.trim="$v.name.kr.$model"
+                                />
+                            </div>
+                            <h6 v-if="!$v.name.kr.required" class="error-text">
+                                To'ldirish shart
+                            </h6>
                         </div>
-                        <div>
-                            <span>Рус тилида</span>
-                            <input v-model="name.ru" type="text" />
+                        <div
+                            class="
+                form-group
+            "
+                            :class="{ 'form-error': $v.name.ru.$error }"
+                        >
+                            <h4>Рус тилида</h4>
+                            <div class="input-div">
+                                <input
+                                    type="text"
+                                    v-model.trim="$v.name.ru.$model"
+                                />
+                            </div>
+                            <h6 v-if="!$v.name.ru.required" class="error-text">
+                                To'ldirish shart
+                            </h6>
                         </div>
-                        <button @click="addregion" class="add">Qo'shish</button>
+
+                        <button @click="addregion" class="primary">
+                            Qo'shish
+                        </button>
                     </div>
                 </div>
             </div>
@@ -63,6 +105,7 @@
                                         <th>
                                             {{ item.ru }}
                                         </th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody v-if="region != null">
@@ -73,6 +116,62 @@
                                         <td>{{ item.name.uz }}</td>
                                         <td>{{ item.name.kr }}</td>
                                         <td>{{ item.name.ru }}</td>
+                                        <td>
+                                            <div class="action">
+                                                <button class="edit">
+                                                    <svg
+                                                        width="19"
+                                                        height="18"
+                                                        viewBox="0 0 19 18"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                        <path
+                                                            d="M0.991894 18C0.714753 17.9995 0.450557 17.8827 0.263764 17.6779C0.0735276 17.4749 -0.021002 17.2003 0.00392993 16.9231L0.245981 14.2615L11.4278 3.08372L14.9222 6.57716L3.74337 17.754L1.0818 17.996C1.05117 17.999 1.02054 18 0.991894 18ZM15.6197 5.87867L12.1262 2.38523L14.2217 0.289757C14.407 0.10424 14.6585 0 14.9207 0C15.1829 0 15.4344 0.10424 15.6197 0.289757L17.7152 2.38523C17.9007 2.57054 18.0049 2.822 18.0049 3.08421C18.0049 3.34643 17.9007 3.59789 17.7152 3.7832L15.6207 5.87768L15.6197 5.87867Z"
+                                                            fill="#2E3A59"
+                                                        />
+                                                    </svg>
+                                                </button>
+                                                <button class="delete">
+                                                    <svg
+                                                        width="24"
+                                                        height="24"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                        <path
+                                                            d="M4 6.5H5.77778H20"
+                                                            stroke="#EB5757"
+                                                            stroke-width="2"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                        />
+                                                        <path
+                                                            d="M8.57143 6.6V4.8C8.57143 4.32261 8.75204 3.86477 9.07353 3.52721C9.39502 3.18964 9.83106 3 10.2857 3H13.7143C14.1689 3 14.605 3.18964 14.9265 3.52721C15.248 3.86477 15.4286 4.32261 15.4286 4.8V6.6M18 6.6V19.2C18 19.6774 17.8194 20.1352 17.4979 20.4728C17.1764 20.8104 16.7404 21 16.2857 21H7.71429C7.25963 21 6.82359 20.8104 6.5021 20.4728C6.18061 20.1352 6 19.6774 6 19.2V6.6H18Z"
+                                                            stroke="#EB5757"
+                                                            stroke-width="2"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                        />
+                                                        <path
+                                                            d="M10 11V17"
+                                                            stroke="#EB5757"
+                                                            stroke-width="2"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                        />
+                                                        <path
+                                                            d="M14 11V17"
+                                                            stroke="#EB5757"
+                                                            stroke-width="2"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                        />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -133,6 +232,7 @@
 </template>
 
 <script>
+import { required, minLength } from "vuelidate/lib/validators";
 export default {
     layout: "admin",
     data() {
@@ -167,13 +267,6 @@ export default {
                     ru: "Название района"
                 }
             ],
-            data: [
-                {
-                    uz: "Buxoro",
-                    cr: "Buxoro",
-                    ru: "Buxoro"
-                }
-            ],
 
             tabMenu: [
                 {
@@ -198,6 +291,21 @@ export default {
             ]
         };
     },
+    validations: {
+        name: {
+            uz: {
+                required
+            },
+
+            kr: {
+                required
+            },
+
+            ru: {
+                required
+            }
+        }
+    },
     async mounted() {
         console.log("assa", this.region);
         let region = await this.$axios.$get("region/get");
@@ -209,9 +317,13 @@ export default {
             this.region.forEach(item => {
                 item.name = this.name;
             });
-            await this.$axios.$post("region/add", this.region).then(res => {
-                console.log("success");
-            });
+            await this.$axios
+                .$post("region/add", {
+                    name: this.name
+                })
+                .then(res => {
+                    console.log("success");
+                });
         },
         openModalRegion() {
             this.isRegion = true;
@@ -227,11 +339,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// .table-content {
-//     padding: 16px 40px;
-//     background: #f1f2f5;
-//     border-radius: 8px;
-// }
+.modal {
+    h3 {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 24px;
+        color: #201918;
+    }
+    .primary {
+        padding: 12px;
+        width: 100%;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
 .control {
     .add {
         cursor: pointer;

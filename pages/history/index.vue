@@ -6,52 +6,55 @@
                     Тарих
                 </h3>
             </div>
-            <div class="form">
+            <div class="formx">
                 <div class="card-row">
                     <div class="card-4">
-                        <span>Логин</span>
-                        <div class="select">
-                            <div
-                                class="selectBtn"
-                                id="h1"
-                                data-type="firstOptioana"
+                        <div
+                            class="
+                form-group
+            "
+                            :class="{ 'form-error': $v.user.login.$error }"
+                        >
+                            <h4>Логин</h4>
+                            <div class="input-div">
+                                <select v-model.trim="$v.user.login.$model">
+                                    <option
+                                        style="display: none;"
+                                        value=""
+                                        disabled
+                                        selected
+                                        >Viloyatni tanlang</option
+                                    >
+                                    <option value="1">All</option>
+                                    <option value="2">Toshkent</option>
+                                    <option value="3">Xorazm</option>
+                                </select>
+                            </div>
+                            <h6
+                                v-if="!$v.user.login.required"
+                                class="error-text"
                             >
-                                {{ $t("tuzilma") }}
-                            </div>
-                            <div class="selectDropdown scroll">
-                                <div class="option" data-type="firstOption">
-                                    First option
-                                </div>
-                                <div class="option" data-type="secondOption">
-                                    Second option
-                                </div>
-                                <div class="option" data-type="thirdOption">
-                                    Third option
-                                </div>
-                                <div class="option" data-type="forthOption">
-                                    Forth option
-                                </div>
-                                <div class="option" data-type="fifthOption">
-                                    Fifth option
-                                </div>
-                                <div class="option" data-type="sixthOptionzzz">
-                                    12
-                                </div>
-                            </div>
+                                Tanlanishi shart
+                            </h6>
                         </div>
                     </div>
-                    <div class="card-4">
-                        <span>Логин</span>
-                        <input value="" type="date" />
+                    <div class="card-4 form-group">
+                        <h4>Бошлаш санаси</h4>
+                        <div class="input-div">
+                            <input value="" type="date" />
+                        </div>
                     </div>
-                    <div class="card-4">
-                        <span>Логин</span>
-                        <input value="" type="date" />
+                    <div class="card-4 form-group">
+                        <h4>Тугаш санаси</h4>
+                        <div class="input-div">
+                            <input value="" type="date" />
+                        </div>
                     </div>
 
-                    <div class="card-4">
-                        <div class="search">
-                            <button class="search-bt">
+                    <div class="card-4 form-froup">
+                        <h4>sa</h4>
+                        <div class="input-div flex search">
+                            <button class="primary search-bt">
                                 {{ $t("search") }}
                             </button>
                             <button class="clear-bt flex">
@@ -111,10 +114,14 @@
 </template>
 
 <script>
+import { required, minLength } from "vuelidate/lib/validators";
 export default {
     layout: "admin",
     data() {
         return {
+            user: {
+                login: ""
+            },
             header: [
                 {
                     uz: "Login ",
@@ -179,6 +186,24 @@ export default {
             ]
         };
     },
+    validations: {
+        user: {
+            login: {
+                required
+            },
+            phone: {
+                required,
+                minLength: minLength(17)
+            },
+            password: {
+                required,
+                minLength: minLength(6)
+            },
+            region: {
+                required
+            }
+        }
+    },
     mounted() {},
     methods: {}
 };
@@ -186,65 +211,19 @@ export default {
 
 <style lang="scss" scoped>
 .history {
-    .form {
-        margin-bottom: 44px;
-        .card-row {
-            .card-4 {
-                display: flex;
-                flex-direction: column;
-                justify-content: end;
-                .select {
-                    .selectBtn {
-                        padding: 16px;
-                        height: 50px !important;
-                    }
-                }
-                span {
-                    font-weight: 500;
-                    font-size: 14px;
-                    line-height: 16px;
-                    color: #bbbbbb;
-                    margin-bottom: 8px;
-                }
-                input {
-                    padding: 12px 16px;
-                    background: #f5f4f4;
-                    font-size: 16px;
-                    line-height: 24px;
-                    color: #201918;
-                    border: 0;
-                    border-radius: 4px;
-                    &:focus {
-                        outline: 1px solid #e88243;
-                    }
-                }
-                .search {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    button {
-                        height: 50px;
-                        // padding: 12px 0;
-                        cursor: pointer;
-                        border: 0;
-                        border-radius: 4px;
-                        font-weight: 500;
-                        font-size: 15px;
-                        line-height: 16px;
-                    }
-                    button.clear-bt {
-                        padding: 12px;
-                        margin-bottom: 0;
-                        cursor: pointer;
-                        background: transparent;
-                    }
-                    button.search-bt {
-                        width: calc(100% - 60px);
-                        background: #e88243;
-                        color: #fff;
-                    }
-                }
-            }
+    .search {
+        button {
+            padding: 12px 0;
+            border: 0;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 24px;
+        }
+        button.clear-bt {
+            padding: 12px;
+        }
+        button.search-bt {
+            width: calc(100% - 60px);
         }
     }
 }
