@@ -4,7 +4,72 @@ $gc: #e88243;
 button {
     border: none;
     cursor: pointer;
+    border-radius: 4px;
+
     background-color: transparent;
+}
+.til {
+    padding: 24px 0;
+    margin-right: 24px;
+    position: relative;
+    .globus {
+        margin-right: 4px;
+    }
+    .til-icon {
+        transition: 0.2s;
+    }
+    button {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        color: #4f4f4f;
+        background: transparent;
+        border: none;
+    }
+    .til-menu {
+        position: absolute;
+        display: none;
+        left: 0;
+        width: 120px;
+        top: 72px;
+        z-index: 23;
+        div {
+            background: #ffffff;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            padding: 10px 15px;
+            padding-bottom: 0;
+            ul {
+                list-style: none;
+            }
+            h6 {
+                font-size: 14px;
+                line-height: 16px;
+                display: flex;
+                align-items: center;
+                color: #201918;
+                cursor: pointer;
+                margin-bottom: 16px;
+                padding: 0 10px;
+            }
+            h6:hover {
+                color: #e88243;
+            }
+        }
+    }
+    &:hover {
+        .til-icon {
+            transform: rotate(-180deg);
+        }
+        .til-menu {
+            display: block;
+        }
+    }
 }
 button.primary {
     background-color: $gc;
@@ -370,6 +435,9 @@ div.my-modal {
     z-index: 25;
     transition: 0.3s;
 }
+.delete-mod {
+    width: 410px !important;
+}
 
 .block-fh {
     display: block !important;
@@ -429,6 +497,7 @@ td.error-text {
 }
 .delete-mod {
     .head {
+        margin-bottom: 32px;
         h3 {
             font-weight: 500;
             font-size: 24px;
@@ -443,10 +512,20 @@ td.error-text {
             font-size: 16px;
             line-height: 24px;
             color: #000000;
+            margin-bottom: 32px;
         }
-        .btns {
-            button {
-                padding: 12px 48px;
+        .flex-center {
+            display: flex;
+            justify-content: center;
+            .btns {
+                button {
+                    padding: 12px 48px;
+                }
+                button.no {
+                    margin-left: 16px;
+                    background: #ffffff;
+                    border: 1px solid #1c1b1b;
+                }
             }
         }
     }

@@ -1,7 +1,96 @@
 button {
   border: none;
   cursor: pointer;
+  border-radius: 4px;
   background-color: transparent;
+}
+
+.til {
+  padding: 24px 0;
+  margin-right: 24px;
+  position: relative;
+}
+
+.til .globus {
+  margin-right: 4px;
+}
+
+.til .til-icon {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.til button {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #4f4f4f;
+  background: transparent;
+  border: none;
+}
+
+.til .til-menu {
+  position: absolute;
+  display: none;
+  left: 0;
+  width: 120px;
+  top: 72px;
+  z-index: 23;
+}
+
+.til .til-menu div {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px 15px;
+  padding-bottom: 0;
+}
+
+.til .til-menu div ul {
+  list-style: none;
+}
+
+.til .til-menu div h6 {
+  font-size: 14px;
+  line-height: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #201918;
+  cursor: pointer;
+  margin-bottom: 16px;
+  padding: 0 10px;
+}
+
+.til .til-menu div h6:hover {
+  color: #e88243;
+}
+
+.til:hover .til-icon {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.til:hover .til-menu {
+  display: block;
 }
 
 button.primary {
@@ -467,6 +556,10 @@ div.my-modal {
   transition: 0.3s;
 }
 
+.delete-mod {
+  width: 410px !important;
+}
+
 .block-fh {
   display: block !important;
 }
@@ -543,6 +636,10 @@ td.error-text p {
   opacity: 1;
 }
 
+.delete-mod .head {
+  margin-bottom: 32px;
+}
+
 .delete-mod .head h3 {
   font-weight: 500;
   font-size: 24px;
@@ -560,9 +657,25 @@ td.error-text p {
   font-size: 16px;
   line-height: 24px;
   color: #000000;
+  margin-bottom: 32px;
 }
 
-.delete-mod .del-mod .btns button {
+.delete-mod .del-mod .flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.delete-mod .del-mod .flex-center .btns button {
   padding: 12px 48px;
+}
+
+.delete-mod .del-mod .flex-center .btns button.no {
+  margin-left: 16px;
+  background: #ffffff;
+  border: 1px solid #1c1b1b;
 }
 /*# sourceMappingURL=style.css.map */
