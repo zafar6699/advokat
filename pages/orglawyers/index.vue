@@ -147,7 +147,10 @@
             <div class="cards">
                 <div class="card-row-2 ">
                     <nuxt-link
-                        :to="{ name: 'orglawyers-id___' + $i18n.locale }"
+                        :to="{
+                            name: `orglawyers-id___${$i18n.locale}`,
+                            params: { id: 1 }
+                        }"
                         class="card-2 flex cardbox"
                     >
                         <div class="left">
@@ -167,10 +170,7 @@
                             <img src="@/static/img/banner.png" alt="" />
                         </div>
                     </nuxt-link>
-                    <nuxt-link
-                        :to="{ name: 'orglawyers-id___' + $i18n.locale }"
-                        class="card-2 flex cardbox"
-                    >
+                    <nuxt-link to="assa" class="card-2 flex cardbox">
                         <div class="left">
                             <div class="title">
                                 <h3>“Norton legal” адвокатская фирма</h3>
@@ -264,6 +264,7 @@ export default {
 .org-laywers {
     .content-head {
         margin-bottom: 32px;
+        margin-right: -8px;
         div.izlash {
             position: relative;
             span {
