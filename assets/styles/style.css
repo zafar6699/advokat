@@ -855,6 +855,11 @@ td.error-text p {
   border: 1px solid #1c1b1b;
 }
 
+.no {
+  background: #ffffff;
+  border: 1px solid #1c1b1b;
+}
+
 .flex-end {
   display: -webkit-box;
   display: -ms-flexbox;
