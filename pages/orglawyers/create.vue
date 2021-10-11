@@ -276,53 +276,7 @@ export default {
 .con {
     margin-bottom: 40px;
 }
-select {
-    width: 170px;
-    appearance: none;
-    overflow: hidden;
-    background: url("@/static/img/icon/edit.png") no-repeat right !important;
-}
-select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
-    outline: 0;
-    box-shadow: none;
-    background-image: none;
-}
-/* Remove IE arrow */
-select::-ms-expand {
-    display: none;
-}
-/* Custom Select */
-.select {
-    width: 47%;
-    position: relative;
-    display: flex;
-    height: 3em;
-    line-height: 3;
-    overflow: hidden;
-}
-select {
-    flex: 1;
-    padding: 0 0.5em;
-    cursor: pointer;
-}
-/* Arrow */
-.select::after {
-    content: "\203A";
-    transform: rotate(90deg);
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0 1em;
-    cursor: pointer;
-    pointer-events: none;
-    -webkit-transition: 0.25s all ease;
-    -o-transition: 0.25s all ease;
-    transition: 0.25s all ease;
-}
+
 .save {
     .saves {
         button {
