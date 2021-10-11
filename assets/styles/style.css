@@ -142,6 +142,148 @@ td.max-320 {
   color: #fff;
 }
 
+div.save-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.managment .activity {
+  margin-bottom: 25px;
+}
+
+.end-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn-delete {
+  background: #ec492c;
+  border-radius: 4px;
+  padding: 12px 24px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.btn-delete:hover {
+  background: #f0644b;
+}
+
+.btn-delete:active {
+  background: #c03820;
+}
+
+.btn-delete i {
+  margin-right: 10px;
+}
+
+.btn-outline {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  padding: 12px 34px;
+  color: #605856;
+  border: 1px solid #605856;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.mr-24 {
+  margin-right: 24px;
+}
+
+.ml-24 {
+  margin-left: 24px;
+}
+
+div.radio-custom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Hide the browser's default radio button */
+  /* Create a custom radio button */
+  /* On mouse-over, add a grey background color */
+  /* When the radio button is checked, add a blue background */
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* Show the indicator (dot/circle) when checked */
+  /* Style the indicator (dot/circle) */
+}
+
+div.radio-custom .cont {
+  display: block;
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 16px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #201918;
+}
+
+div.radio-custom .cont input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+div.radio-custom .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #605856;
+}
+
+div.radio-custom .cont input:checked ~ .checkmark {
+  background-color: #fff;
+  border: 2px solid #e88243;
+}
+
+div.radio-custom .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 49%;
+  left: 51%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+div.radio-custom .cont input:checked ~ .checkmark:after {
+  display: block;
+}
+
+div.radio-custom .cont .checkmark:after {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #e88243;
+}
+
 div.form-group {
   margin-bottom: 24px;
 }
