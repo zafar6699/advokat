@@ -21,9 +21,13 @@
                             >
                                 Танланг
                             </option>
-                            <option value="1">Суппер админ</option>
-                            <option value="2">Toshkent</option>
-                            <option value="3">Xorazm</option>
+                            <option
+                                v-for="(item, index) in roles"
+                                :key="index"
+                                :value="item.key"
+                            >
+                                {{ item.value[$i18n.locale] }}
+                            </option>
                         </select>
                     </div>
                     <h6 v-if="!$v.user.role.required" class="error-text">
@@ -422,233 +426,377 @@
             </div>
         </div>
 
-        <h4 class="title-small ">
-            Фаолияти
-        </h4>
+        <div v-if="user.role == 'advokat'">
+            <h4 class="title-small mt-10">
+                Фаолияти
+            </h4>
 
-        <div
-            class="activity"
-            v-for="(item, index) in user.activity"
-            :key="index"
-        >
-            <div class="card-row">
-                <div class="card-4">
-                    <div
-                        class="form-group"
-                        :class="{ 'form-error': $v.user.role.$error }"
-                    >
-                        <h4>Вилоят</h4>
-                        <div class="input-div">
-                            <select v-model="item.region">
-                                <option
-                                    value=""
-                                    style="display: none;"
-                                    disabled
-                                    selected
-                                >
-                                    Танланг
-                                </option>
-                                <option value="1">Суппер админ</option>
-                                <option value="2">Toshkent</option>
-                                <option value="3">Xorazm</option>
-                            </select>
-                        </div>
-                        <h6 v-if="!$v.user.role.required" class="error-text">
-                            Обязательное поле
-                        </h6>
-                    </div>
-                </div>
-                <div class="card-4">
-                    <div
-                        class="form-group"
-                        :class="{ 'form-error': $v.user.role.$error }"
-                    >
-                        <h4>Туман</h4>
-                        <div class="input-div">
-                            <select v-model="user.role">
-                                <option
-                                    value=""
-                                    style="display: none;"
-                                    disabled
-                                    selected
-                                >
-                                    Танланг
-                                </option>
-                                <option value="1">Суппер админ</option>
-                                <option value="2">Toshkent</option>
-                                <option value="3">Xorazm</option>
-                            </select>
-                        </div>
-                        <h6 v-if="!$v.user.role.required" class="error-text">
-                            Обязательное поле
-                        </h6>
-                    </div>
-                </div>
-                <div class="card-2">
-                    <div
-                        class="form-group"
-                        :class="{ 'form-error': $v.user.role.$error }"
-                    >
-                        <h4>Идора номи</h4>
-                        <div class="input-div">
-                            <select v-model="user.role">
-                                <option
-                                    value=""
-                                    style="display: none;"
-                                    disabled
-                                    selected
-                                >
-                                    Танланг
-                                </option>
-                                <option value="1">Суппер админ</option>
-                                <option value="2">Toshkent</option>
-                                <option value="3">Xorazm</option>
-                            </select>
-                        </div>
-                        <h6 v-if="!$v.user.role.required" class="error-text">
-                            Обязательное поле
-                        </h6>
-                    </div>
-                </div>
-                <div class="card-4">
-                    <div
-                        class="form-group"
-                        :class="{ 'form-error': $v.user.login.$error }"
-                    >
-                        <h4>Гувоҳнома рақами</h4>
-                        <div class="input-div">
-                            <input
-                                type="text"
-                                v-model="$v.user.login.$model"
-                                value=""
-                            />
-                        </div>
-
-                        <h6 v-if="!$v.user.login.required" class="error-text">
-                            Обязательное поле
-                        </h6>
-                    </div>
-                </div>
-                <div class="card-4">
-                    <div
-                        class="form-group"
-                        :class="{ 'form-error': $v.user.role.$error }"
-                    >
-                        <h4>Статус</h4>
-                        <div class="input-div">
-                            <select v-model="user.role">
-                                <option
-                                    value=""
-                                    style="display: none;"
-                                    disabled
-                                    selected
-                                >
-                                    Танланг
-                                </option>
-                                <option value="1">Суппер админ</option>
-                                <option value="2">Toshkent</option>
-                                <option value="3">Xorazm</option>
-                            </select>
-                        </div>
-                        <h6 v-if="!$v.user.role.required" class="error-text">
-                            Обязательное поле
-                        </h6>
-                    </div>
-                </div>
-                <div class="card-2">
-                    <div
-                        class="form-group"
-                        :class="{ 'form-error': $v.user.role.$error }"
-                    >
-                        <h4>Статус</h4>
-                        <div class="input-div">
-                            <select v-model="user.role">
-                                <option
-                                    value=""
-                                    style="display: none;"
-                                    disabled
-                                    selected
-                                >
-                                    Танланг
-                                </option>
-                                <option value="1">Суппер админ</option>
-                                <option value="2">Toshkent</option>
-                                <option value="3">Xorazm</option>
-                            </select>
-                        </div>
-                        <h6 v-if="!$v.user.role.required" class="error-text">
-                            Обязательное поле
-                        </h6>
-                    </div>
-                </div>
-                <div class="card-4">
-                    <div
-                        class="form-group"
-                        :class="{ 'form-error': $v.user.birthday.$error }"
-                    >
-                        <h4>Бошлаш санаси</h4>
-                        <div class="input-div">
-                            <input
-                                type="date"
-                                v-model="$v.user.birthday.$model"
-                            />
-                        </div>
-                        <h6
-                            v-if="!$v.user.birthday.required"
-                            class="error-text"
+            <div class="activity">
+                <div
+                    class="card-row border-bottom-1"
+                    v-for="(v, index) in $v.user.activity.$each.$iter"
+                    :key="index"
+                >
+                    <div class="card-4">
+                        <div
+                            class="form-group"
+                            :class="{
+                                'form-error': v.region.$error
+                            }"
                         >
-                            Обязательное поле
-                        </h6>
-                    </div>
-                </div>
-                <div class="card-4">
-                    <div
-                        class="form-group"
-                        :class="{ 'form-error': $v.user.birthday.$error }"
-                    >
-                        <h4>Тугатиш санаси</h4>
-                        <div class="input-div">
-                            <input
-                                type="date"
-                                v-model="$v.user.birthday.$model"
-                            />
+                            <h4>Вилоят</h4>
+                            <div class="input-div">
+                                <select v-model="v.region.$model">
+                                    <option
+                                        value=""
+                                        style="display: none;"
+                                        disabled
+                                        selected
+                                    >
+                                        Танланг
+                                    </option>
+                                    <option value="1">Суппер админ</option>
+                                    <option value="2">Toshkent</option>
+                                    <option value="3">Xorazm</option>
+                                </select>
+                            </div>
+                            <h6 v-if="!v.region.required" class="error-text">
+                                Обязательное поле
+                            </h6>
                         </div>
-                        <h6
-                            v-if="!$v.user.birthday.required"
-                            class="error-text"
+                    </div>
+                    <div class="card-4">
+                        <div
+                            class="form-group"
+                            :class="{
+                                'form-error': v.district.$error
+                            }"
                         >
-                            Обязательное поле
-                        </h6>
-                    </div>
-                </div>
-
-                <div class="card-4">
-                    <div
-                        class="form-group"
-                        :class="{ 'form-error': $v.user.phone.$error }"
-                    >
-                        <h4>Телефон рақам</h4>
-                        <div class="input-div">
-                            <input
-                                type="text"
-                                v-model.trim="$v.user.phone.$model"
-                                placeholder="+998 -- --- -- --"
-                                v-mask="'+998 ## ### ## ##'"
-                            />
+                            <h4>Туман</h4>
+                            <div class="input-div">
+                                <select v-model="v.district.$model">
+                                    <option
+                                        value=""
+                                        style="display: none;"
+                                        disabled
+                                        selected
+                                    >
+                                        Танланг
+                                    </option>
+                                    <option value="1">Суппер админ</option>
+                                    <option value="2">Toshkent</option>
+                                    <option value="3">Xorazm</option>
+                                </select>
+                            </div>
+                            <h6 v-if="!v.district.required" class="error-text">
+                                Обязательное поле
+                            </h6>
                         </div>
-                        <h6 v-if="!$v.user.phone.required" class="error-text">
-                            Обязательное поле
-                        </h6>
-                        <h6 v-if="!$v.user.phone.minLength" class="error-text">
-                            Залить правильно
-                        </h6>
+                    </div>
+                    <div class="card-2">
+                        <div
+                            class="form-group"
+                            :class="{
+                                'form-error': v.organization.$error
+                            }"
+                        >
+                            <h4>Идора номи</h4>
+                            <div class="input-div">
+                                <select v-model="v.organization.$model">
+                                    <option
+                                        value=""
+                                        style="display: none;"
+                                        disabled
+                                        selected
+                                    >
+                                        Танланг
+                                    </option>
+                                    <option value="1">Суппер админ</option>
+                                    <option value="2">Toshkent</option>
+                                    <option value="3">Xorazm</option>
+                                </select>
+                            </div>
+                            <h6
+                                v-if="!v.organization.required"
+                                class="error-text"
+                            >
+                                Обязательное поле
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="card-4">
+                        <div
+                            class="form-group"
+                            :class="{
+                                'form-error': v.sertificate.$error
+                            }"
+                        >
+                            <h4>Гувоҳнома рақами</h4>
+                            <div class="input-div">
+                                <input
+                                    type="text"
+                                    v-model="v.sertificate.$model"
+                                    value=""
+                                />
+                            </div>
+
+                            <h6
+                                v-if="!v.sertificate.required"
+                                class="error-text"
+                            >
+                                Обязательное поле
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="card-4">
+                        <div
+                            class="form-group"
+                            :class="{
+                                'form-error': v.status.$error
+                            }"
+                        >
+                            <h4>Статус</h4>
+                            <div class="input-div">
+                                <select v-model="v.status.$model">
+                                    <option
+                                        value=""
+                                        style="display: none;"
+                                        disabled
+                                        selected
+                                    >
+                                        Танланг
+                                    </option>
+                                    <option value="1">Суппер админ</option>
+                                    <option value="2">Toshkent</option>
+                                    <option value="3">Xorazm</option>
+                                </select>
+                            </div>
+                            <h6 v-if="!v.status.required" class="error-text">
+                                Обязательное поле
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="card-2">
+                        <div
+                            class="form-group"
+                            :class="{
+                                'form-error': v.position.$error
+                            }"
+                        >
+                            <h4>Статус</h4>
+                            <div class="input-div">
+                                <select v-model="v.position.$model">
+                                    <option
+                                        value=""
+                                        style="display: none;"
+                                        disabled
+                                        selected
+                                    >
+                                        Танланг
+                                    </option>
+                                    <option value="1">Суппер админ</option>
+                                    <option value="2">Toshkent</option>
+                                    <option value="3">Xorazm</option>
+                                </select>
+                            </div>
+                            <h6 v-if="!v.position.required" class="error-text">
+                                Обязательное поле
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="card-4">
+                        <div
+                            class="form-group"
+                            :class="{
+                                'form-error': v.start.$error
+                            }"
+                        >
+                            <h4>Бошлаш санаси</h4>
+                            <div class="input-div">
+                                <input type="date" v-model="v.start.$model" />
+                            </div>
+                            <h6 v-if="!v.start.required" class="error-text">
+                                Обязательное поле
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="card-4">
+                        <div
+                            class="form-group"
+                            :class="{
+                                'form-error': v.end.$error
+                            }"
+                        >
+                            <h4>Тугатиш санаси</h4>
+                            <div class="input-div">
+                                <input type="date" v-model="v.end.$model" />
+                            </div>
+                            <h6 v-if="!v.end.required" class="error-text">
+                                Обязательное поле
+                            </h6>
+                        </div>
+                    </div>
+
+                    <div class="card-4">
+                        <div
+                            class="form-group"
+                            :class="{
+                                'form-error': v.phone.$error
+                            }"
+                        >
+                            <h4>Телефон рақам</h4>
+                            <div class="input-div">
+                                <input
+                                    type="text"
+                                    v-model="v.phone.$model"
+                                    placeholder="+998 -- --- -- --"
+                                    v-mask="'+998 ## ### ## ##'"
+                                />
+                            </div>
+                            <h6 v-if="!v.phone.required" class="error-text">
+                                Обязательное поле
+                            </h6>
+                            <h6 v-if="!v.phone.minLength" class="error-text">
+                                Залить правильно
+                            </h6>
+                        </div>
+                    </div>
+
+                    <div class="card-4 end-bottom">
+                        <button
+                            class="btn-delete"
+                            v-if="user.activity.length > 1"
+                            @click="removeActivity(index)"
+                        >
+                            <i class="fa fa-trash"></i>Ўчириш
+                        </button>
                     </div>
                 </div>
 
-                <div class="card-4 end-bottom">
-                    <button class="btn-delete">
-                        <i class="fa fa-times"></i> Учириш
+                <div class="mt-8">
+                    <button class="add-item" @click="addActivity">
+                        <img src="@/static/img/addbtn.png" alt="" />
+                        <b> Иш жойи қўшиш </b>
                     </button>
+                </div>
+            </div>
+
+            <h4 class="title-small mt-10">
+                Лицензия тўғрисида маълумот
+            </h4>
+
+            <div class="card-row">
+                <div class="card-2">
+                    <div
+                        class="form-group"
+                        :class="{
+                            'form-error': $v.user.license.position.$error
+                        }"
+                    >
+                        <h4>Мақоми</h4>
+                        <div class="input-div">
+                            <input
+                                type="text"
+                                v-model="$v.user.license.position.$model"
+                            />
+                        </div>
+                        <h6
+                            v-if="!$v.user.license.position.required"
+                            class="error-text"
+                        >
+                            Обязательное поле
+                        </h6>
+                    </div>
+                </div>
+                <div class="card-4">
+                    <div
+                        class="form-group"
+                        :class="{ 'form-error': $v.user.license.seria.$error }"
+                    >
+                        <h4>Серия ва рақами</h4>
+                        <div class="input-div">
+                            <input
+                                type="text"
+                                v-model="$v.user.license.seria.$model"
+                            />
+                        </div>
+                        <h6
+                            v-if="!$v.user.license.seria.required"
+                            class="error-text"
+                        >
+                            Обязательное поле
+                        </h6>
+                    </div>
+                </div>
+                <div class="card-4">
+                    <div
+                        class="form-group"
+                        :class="{ 'form-error': $v.user.license.given.$error }"
+                    >
+                        <h4>Ким томонидан берилган</h4>
+                        <div class="input-div">
+                            <select v-model="$v.user.license.given.$model">
+                                <option
+                                    value=""
+                                    style="display: none;"
+                                    disabled
+                                    selected
+                                >
+                                    Танланг
+                                </option>
+                                <option value="1">Суппер админ</option>
+                                <option value="2">Toshkent</option>
+                                <option value="3">Xorazm</option>
+                            </select>
+                        </div>
+                        <h6
+                            v-if="!$v.user.license.given.required"
+                            class="error-text"
+                        >
+                            Обязательное поле
+                        </h6>
+                    </div>
+                </div>
+
+                <div class="card-4">
+                    <div
+                        class="form-group"
+                        :class="{ 'form-error': $v.user.license.date.$error }"
+                    >
+                        <h4>Берилган санаси</h4>
+                        <div class="input-div">
+                            <input
+                                type="date"
+                                v-model="$v.user.license.date.$model"
+                            />
+                        </div>
+                        <h6
+                            v-if="!$v.user.license.date.required"
+                            class="error-text"
+                        >
+                            Обязательное поле
+                        </h6>
+                    </div>
+                </div>
+                <div class="card-4">
+                    <div
+                        class="form-group"
+                        :class="{ 'form-error': $v.user.license.period.$error }"
+                    >
+                        <h4>Амал қилиш муддати</h4>
+                        <div class="input-div">
+                            <input
+                                type="date"
+                                v-model="$v.user.license.period.$model"
+                            />
+                        </div>
+                        <h6
+                            v-if="!$v.user.license.period.required"
+                            class="error-text"
+                        >
+                            Обязательное поле
+                        </h6>
+                    </div>
                 </div>
             </div>
         </div>
@@ -694,8 +842,154 @@ export default {
                 }
             ],
 
+            roles: [
+                {
+                    key: "admin",
+                    value: {
+                        uz: "Admin",
+                        ru: "Админ",
+                        kr: "Админ"
+                    }
+                },
+                {
+                    key: "advokat",
+                    value: {
+                        uz: "Advokatlar palatasi",
+                        ru: "Палата адвокатов",
+                        kr: "Адвокатлар палатаси"
+                    }
+                },
+                {
+                    key: "adliya",
+                    value: {
+                        uz: "Adliya organi",
+                        ru: "Адлия орган",
+                        kr: "Адлия органи"
+                    }
+                },
+                {
+                    key: "prokror",
+                    value: {
+                        uz: "Prokror",
+                        ru: "Прокрор",
+                        kr: "Прокрор"
+                    }
+                },
+                {
+                    key: "sudya",
+                    value: {
+                        uz: "Sudya",
+                        ru: "Судить",
+                        kr: "Судя"
+                    }
+                },
+                {
+                    key: "tergovchi",
+                    value: {
+                        uz: "Tergovchi",
+                        ru: "Следователь",
+                        kr: "Админ"
+                    }
+                },
+                {
+                    key: "surishtiruvchi",
+                    value: {
+                        uz: "Surishtiruvchi",
+                        ru: "Расследование",
+                        kr: "Суриштирувчи"
+                    }
+                }
+            ],
+            permission: {
+                admin: [
+                    "user-see",
+                    "user-edit",
+                    "user-rm",
+                    "user-create",
+                    "advokat-see",
+                    "advokat-search",
+                    "advokat-create",
+                    "advokat-edit",
+                    "advokat-rm",
+                    "advokat-report-see",
+                    "advokat-lic-edit",
+                    "restr-see",
+                    "restr-create",
+                    "restr-edit",
+                    "restr-rm",
+                    "restr-add",
+                    "vote-see",
+                    "vote-send",
+                    "monit-see",
+                    "monit-download",
+                    "result-see",
+                    "result-create",
+                    "result-download",
+                    "log-see",
+                    "main-see",
+                    "main-create",
+                    "main-edit",
+                    "main-rm"
+                ],
+                advokat: [
+                    "user-see",
+                    "advokat-see",
+                    "advokat-search",
+                    "advokat-report-see",
+                    "restr-see",
+                    "vote-see",
+                    "vote-send",
+                    "monit-see",
+                    "monit-download",
+                    "result-see",
+                    "result-create",
+                    "result-download"
+                ],
+                adliya: [
+                    "user-see",
+                    "advokat-see",
+                    "advokat-search",
+                    "advokat-report-see",
+                    "restr-see",
+                    "monit-see",
+                    "monit-download",
+                    "result-see",
+                    "result-create",
+                    "result-download"
+                ],
+                prokror: [
+                    "advokat-see",
+                    "advokat-search",
+                    "restr-see",
+                    "vote-see",
+                    "vote-send"
+                ],
+                sudya: [
+                    "advokat-see",
+                    "advokat-search",
+                    "restr-see",
+                    "vote-see",
+                    "vote-send"
+                ],
+                tergovchi: [
+                    "advokat-see",
+                    "advokat-search",
+                    "restr-see",
+                    "vote-see",
+                    "vote-send"
+                ],
+                surishtiruvchi: [
+                    "advokat-see",
+                    "advokat-search",
+                    "restr-see",
+                    "vote-see",
+                    "vote-send"
+                ]
+            },
+
             user: {
-                role: "",
+                permission: [],
+                role: "admin",
                 login: "",
                 password: "",
                 name: "",
@@ -729,7 +1023,14 @@ export default {
                         end: "",
                         phone: ""
                     }
-                ]
+                ],
+                license: {
+                    position: "",
+                    seria: "",
+                    given: "",
+                    date: "",
+                    period: ""
+                }
             }
         };
     },
@@ -831,6 +1132,23 @@ export default {
                         minLength: minLength(17)
                     }
                 }
+            },
+            license: {
+                position: {
+                    required
+                },
+                seria: {
+                    required
+                },
+                given: {
+                    required
+                },
+                date: {
+                    required
+                },
+                period: {
+                    required
+                }
             }
         }
     },
@@ -841,6 +1159,24 @@ export default {
     methods: {
         submitData() {
             this.$v.$touch();
+            this.user.permission = this.permission[this.user.role];
+            console.log("user", this.user);
+        },
+        addActivity() {
+            this.user.activity.push({
+                region: "",
+                district: "",
+                organization: "",
+                sertificate: "",
+                status: "",
+                position: "",
+                start: "",
+                end: "",
+                phone: ""
+            });
+        },
+        removeActivity(index) {
+            this.user.activity.splice(index, 1);
         }
     }
 };

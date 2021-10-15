@@ -45,6 +45,15 @@ button {
   margin-top: 50px;
 }
 
+.mt-8 {
+  margin-top: 8px;
+}
+
+.border-bottom-1 {
+  border-bottom: 3px dotted #999;
+  padding-top: 24px;
+}
+
 td.max-320 {
   max-width: 320px !important;
 }
@@ -143,6 +152,7 @@ td.max-320 {
 }
 
 div.save-actions {
+  margin-top: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -162,9 +172,36 @@ div.save-actions {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  padding-top: 24px !important;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.add-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.add-item img {
+  margin-right: 8px;
+}
+
+.add-item b {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #201918;
 }
 
 .btn-delete {
@@ -207,6 +244,10 @@ div.save-actions {
 
 .ml-24 {
   margin-left: 24px;
+}
+
+.mt-10 {
+  margin-top: 10px;
 }
 
 div.radio-custom {
